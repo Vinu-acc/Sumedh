@@ -291,75 +291,56 @@ nav ul li a:hover {
     }
 
   /* Features Section container */
-
-/* Marquee */
-.services-marquee {
-  overflow:hidden;
-  width:100%;
-  background:var(--dark-navy);
-  padding:20px 0;
-  border-radius:20px;
-  margin-bottom:40px;
+    
+.about-section {
+  padding: 60px 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.marquee-track {
-  display:flex;
-  gap:15px;
-  animation: marquee 20s linear infinite;
+.about-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* for small screens */
 }
 
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  object-fit: cover;
 }
 
-.service-icon {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-width:90px;
-  height:70px;
-  border:2px solid var(--accent);
-  border-radius:12px;
-  color:var(--accent);
-  font-size:0.8rem;
-  font-weight:600;
-  white-space:nowrap;
-  cursor:pointer;
-  flex-shrink:0;
-  transition:all 0.3s;
-  padding:0 10px;
-}
-.service-icon:hover {
-  transform:scale(1.2);
-  border-color:var(--accent-light);
+.about-info {
+  flex: 1;
+  min-width: 280px;
 }
 
-/* CTA */
-.services-cta .btn-primary {
-  padding:14px 28px;
-  font-size:18px;
-  font-weight:700;
-  border:none;
-  border-radius:30px;
-  cursor:pointer;
-  background:var(--accent);
-  color:var(--navy);
-  margin-top:20px;
-  transition:all 0.3s ease;
+.about-info h2 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 20px;
 }
-.services-cta .btn-primary:hover { background:var(--accent-light); transform:translateY(-3px); }
 
-/* Small screen: multiple rows */
-@media(max-width:768px){
-  .marquee-track {
-    flex-wrap:wrap;
-    justify-content:center;
-    animation:none; /* optional: stop scrolling for multiple rows */
+.about-info p {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width:768px){
+  .about-container {
+    flex-direction: column;
+    gap: 30px;
   }
-  .service-icon { margin-bottom:10px; }
+  .about-image img {
+    max-width: 80%;
+  }
 }
-
     /* Extra Visuals Section */
     .extra-visuals {
       margin: 5rem 1.5rem;
@@ -637,43 +618,22 @@ nav ul li a:hover {
   </section>
 
   <!-- Features Section -->
-<section id="services" class="services-section">
-  <h2>Our Services</h2>
-  <p>Business & Management Consultancy – Book a Zoom session now! Focus: Punjab, Haryana, Delhi</p>
-
-  <!-- Marquee Container -->
-  <div class="services-marquee">
-    <div class="marquee-track">
-      <!-- Repeat hollow divs for looping -->
-      <span class="service-icon">Sales</span>
-      <span class="service-icon">Business</span>
-      <span class="service-icon">Finance</span>
-      <span class="service-icon">MIS</span>
-      <span class="service-icon">Banking</span>
-      <span class="service-icon">Growth</span>
-      <span class="service-icon">Cashflow</span>
-      <span class="service-icon">Collections</span>
-      <span class="service-icon">IPO</span>
-      <span class="service-icon">CA/CFO/CEO</span>
-
-      <!-- Repeat for smooth loop -->
-      <span class="service-icon">Sales</span>
-      <span class="service-icon">Business</span>
-      <span class="service-icon">Finance</span>
-      <span class="service-icon">MIS</span>
-      <span class="service-icon">Banking</span>
-      <span class="service-icon">Growth</span>
-      <span class="service-icon">Cashflow</span>
-      <span class="service-icon">Collections</span>
-      <span class="service-icon">IPO</span>
-      <span class="service-icon">CA/CFO/CEO</span>
+  <section id="about" class="about-section">
+  <div class="about-container">
+    <!-- Left Column: Image -->
+    <div class="about-image">
+      <img src="https://via.placeholder.com/400x400" alt="Person Image">
     </div>
-  </div>
 
-  <div class="services-cta">
-    <button onclick="location.href='#cta'" class="btn-primary">
-      Book Your Session Now! (Punjab, Haryana, Delhi)
-    </button>
+    <!-- Right Column: Info -->
+    <div class="about-info">
+      <h2>About Vinashree Meshram</h2>
+      <p>Hello! I am Vinashree Meshram, an MCA student with a passion for data analytics and business process optimization. I have worked on several projects and internships that focus on analyzing data, generating insights, and driving business improvements. My goal is to help organizations leverage data to make better decisions and achieve their objectives.</p>
+      <p>With strong skills in Python, Excel, Power BI, and MySQL, I combine technical expertise with practical business knowledge. I am also comfortable with presentations, communication, and stakeholder management.</p>
+      <p>Hello! I am Vinashree Meshram, an MCA student with a passion for data analytics and business process optimization. I have worked on several projects and internships that focus on analyzing data, generating insights, and driving business improvements. My goal is to help organizations leverage data to make better decisions and achieve their objectives.</p>
+      <p>With strong skills in Python, Excel, Power BI, and MySQL, I combine technical expertise with practical business knowledge. I am also comfortable with presentations, communication, and stakeholder management.</p>
+ 
+    </div>
   </div>
 </section>
 
@@ -732,69 +692,6 @@ hamburger.addEventListener('click', () => {
 });
  
 /* JS will handle active slide scaling */
-const cards=document.querySelectorAll('.service-card');
-const iconsContainer=document.querySelector('.service-icons');
-let current=0;
-let interval;
-
-// Services array for dynamic icons
-const services=[
-  {name:"Sales",icon:"icon-sales.png"},
-  {name:"Business Development",icon:"icon-business.png"},
-  {name:"Finance & Accounts",icon:"icon-finance.png"},
-  {name:"MIS",icon:"icon-mis.png"},
-  {name:"Banking / Loans",icon:"icon-banking.png"},
-  {name:"Growing Business",icon:"icon-grow.png"},
-  {name:"Cashflow",icon:"icon-cashflow.png"},
-  {name:"Collections",icon:"icon-collections.png"},
-  {name:"IPO",icon:"icon-ipo.png"},
-  {name:"CA/CFO/CEO",icon:"icon-ca.png"}
-];
-
-// Populate icons dynamically with random size
-services.forEach((service,index)=>{
-  const div=document.createElement('div');
-  div.classList.add('icon');
-  div.style.backgroundImage=`url(${service.icon})`;
-  const width=Math.floor(Math.random()*40)+50; // 50-90px
-  const height=Math.floor(Math.random()*40)+50;
-  div.style.width=width+'px';
-  div.style.height=height+'px';
-  div.dataset.index=index;
-  iconsContainer.appendChild(div);
-});
-
-// Function to show card
-function showCard(index){
-  cards.forEach(c=>c.classList.remove('active'));
-  cards[index].classList.add('active');
-}
-
-// Automatic slider
-function startSlider(){
-  interval=setInterval(()=>{
-    current=(current+1)%cards.length;
-    showCard(current);
-  },3000);
-}
-
-// Stop slider
-function stopSlider(){
-  clearInterval(interval);
-}
-
-// Start slider
-startSlider();
-
-// Icon click handling
-document.querySelectorAll('.service-icons .icon').forEach(icon=>{
-  icon.addEventListener('click',()=>{
-    stopSlider();
-    current=parseInt(icon.dataset.index);
-    showCard(current);
-  });
-});
-
 
 </script>
 </body>
