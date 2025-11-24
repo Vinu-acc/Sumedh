@@ -170,6 +170,31 @@ nav ul li a:hover {
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
+    .logo-container {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo image */
+.logo-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* optional rounded corners */
+  object-fit: contain;
+}
+
+/* Company name below logo */
+.logo-text {
+  font-size: 0.8rem;
+  color: #ffffff; /* white text */
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
     /* Hero */
     .hero {
       background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center center fixed no-repeat;
@@ -780,8 +805,16 @@ nav ul li a:hover {
 <body>
 
 <!-- Navbar -->
+<!-- Navbar -->
 <nav role="navigation" aria-label="Main Navigation">
-  <div class="brand">Baghla Research and Analytics </div>
+  <div class="brand">
+     <img src="/download (3)-Photoroom.png" alt="Baghla Logo" class="logo-img">
+    <div class="logo-container">
+      <img src="your-logo.png" alt="Baghla Logo" class="logo-img">
+    </div>
+    <!-- Company name below logo -->
+    <div class="logo-text">baghla research and analytics</div>
+  </div>
 
   <!-- Hamburger Icon -->
   <div class="hamburger">
@@ -796,10 +829,9 @@ nav ul li a:hover {
     <li><a href="#features">Features</a></li>
     <li><a href="#extra">Explore</a></li>
     <li><a href="#testimonials">Testimonials</a></li>
-   <li style="background-color:#00c0ff; border-radius:20px; padding:5px 10px;">
-  <a href="#cta" style="color:#010a22; text-decoration:none;">Get Started</a>
-</li>
-
+    <li style="background-color:#00c0ff; border-radius:20px; padding:5px 10px;">
+      <a href="#cta" style="color:#010a22; text-decoration:none;">Get Started</a>
+    </li>
   </ul>
 </nav>
 
