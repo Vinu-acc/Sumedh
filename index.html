@@ -121,56 +121,56 @@ nav ul li a:hover {
 }
 
 /* Hamburger */
+/* Hamburger icon styling */
 .hamburger {
-  display: none;
+  display: none; /* show only on small screens */
   flex-direction: column;
-  gap: 5px;
+  justify-content: space-around;
+  width: 30px;
+  height: 22px;
   cursor: pointer;
 }
 
 .hamburger span {
   display: block;
-  width: 25px;
   height: 3px;
-  background: var(--white);
+  width: 100%;
+  background: #00bfff;
   border-radius: 3px;
   transition: all 0.3s ease;
 }
 
-/* Hamburger active animation */
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+/* Hamburger open state (turns into X) */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
 }
-.hamburger.active span:nth-child(2) {
+
+.hamburger.open span:nth-child(2) {
   opacity: 0;
 }
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
 }
 
-/* Mobile Menu */
-@media (max-width:768px){
+/* Show menu on small screens */
+@media (max-width:768px) {
+  .hamburger { display: flex; }
   nav ul {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    background: var(--dark-navy);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    padding: 0;
-    margin: 0;
     display: none;
-    z-index: 998;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 24px rgba(0,192,255,0.3);
   }
-
-  nav ul.show {
-    display: flex;
-    animation: slideIn 0.5s ease forwards;
-  }
+  nav ul.show { display: flex;
+              animation: slideIn 0.5s ease forwards;
+}
 
   .hamburger {
     display: flex;
@@ -736,5 +736,23 @@ hamburger.addEventListener('click', () => {
   navMenu.classList.toggle('show');
 });
 </script>
+  <script>
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('nav ul');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open'); // animate hamburger to X
+  menu.classList.toggle('show');       // show/hide menu
+});
+
+// Optional: close menu when a link is clicked
+document.querySelectorAll('nav ul li a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    menu.classList.remove('show');
+  });
+});
+</script>
+
 </body>
 </html>
