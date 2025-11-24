@@ -291,83 +291,47 @@ nav ul li a:hover {
     }
 
   /* Features Section container */
-.services-section { padding:60px 20px; text-align:center; }
-.services-section h2 { font-size:2.5rem; color:var(--accent); margin-bottom:10px; }
-.services-section p { font-size:1.2rem; margin-bottom:40px; color:var(--text-dark); }
 
-/* Container Layout */
-.services-container {
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  align-items:flex-start;
-  flex-wrap:wrap;
-}
-
-/* Content Cards */
-.service-content {
-  flex:1;
-  min-width:300px;
-  position:relative;
-  height:300px;
-}
-
-.service-card {
-  position:absolute;
-  top:0; left:0; right:0; bottom:0;
+/* Marquee */
+.services-marquee {
+  overflow:hidden;
+  width:100%;
   background:var(--dark-navy);
+  padding:20px 0;
   border-radius:20px;
-  padding:20px;
+  margin-bottom:40px;
+}
+
+.marquee-track {
   display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  opacity:0;
-  transform:translateY(50px);
-  transition: all 0.8s ease-out;
-  box-shadow:0 6px 20px rgba(0,192,255,0.3);
+  gap:15px;
+  animation: marquee 20s linear infinite;
 }
 
-.service-card.active {
-  opacity:1;
-  transform:translateY(0);
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-/* Icon inside card */
 .service-icon {
-  width:60px; height:60px;
-  border:2px solid var(--accent);
-  border-radius:12px;
-  margin-bottom:15px;
-  background-size:cover;
-  background-position:center;
-}
-
-/* Icon Grid */
-.service-icons {
-  flex:1;
   display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
   align-items:center;
-  gap:10px;
-  min-height:300px;
-  padding:10px;
-  position:relative;
-}
-
-/* Each icon will have random size */
-.service-icons .icon {
+  justify-content:center;
+  min-width:90px;
+  height:70px;
   border:2px solid var(--accent);
   border-radius:12px;
+  color:var(--accent);
+  font-size:0.8rem;
+  font-weight:600;
+  white-space:nowrap;
   cursor:pointer;
-  background-size:cover;
-  background-position:center;
-  transition:all 0.5s ease-out;
+  flex-shrink:0;
+  transition:all 0.3s;
+  padding:0 10px;
 }
-
-.service-icons .icon:hover {
-  transform:scale(1.3);
+.service-icon:hover {
+  transform:scale(1.2);
   border-color:var(--accent-light);
 }
 
@@ -381,20 +345,19 @@ nav ul li a:hover {
   cursor:pointer;
   background:var(--accent);
   color:var(--navy);
-  margin-top:40px;
+  margin-top:20px;
   transition:all 0.3s ease;
 }
-.services-cta .btn-primary:hover {
-  background:var(--accent-light);
-  color:var(--navy);
-  transform:translateY(-3px);
-}
+.services-cta .btn-primary:hover { background:var(--accent-light); transform:translateY(-3px); }
 
-/* Responsive */
+/* Small screen: multiple rows */
 @media(max-width:768px){
-  .services-container { flex-direction:column; }
-  .service-icons { flex-wrap:nowrap; justify-content:space-around; min-height:auto; margin-bottom:20px; }
-  .service-card { height:220px; }
+  .marquee-track {
+    flex-wrap:wrap;
+    justify-content:center;
+    animation:none; /* optional: stop scrolling for multiple rows */
+  }
+  .service-icon { margin-bottom:10px; }
 }
 
     /* Extra Visuals Section */
@@ -678,65 +641,32 @@ nav ul li a:hover {
   <h2>Our Services</h2>
   <p>Business & Management Consultancy – Book a Zoom session now! Focus: Punjab, Haryana, Delhi</p>
 
-  <div class="services-container">
-    <!-- Content Display -->
-    <div class="service-content">
-      <!-- All service cards -->
-      <div class="service-card active" data-name="Sales">
-        <div class="service-icon" style="background-image:url('icon-sales.png');"></div>
-        <h3>Sales</h3>
-        <p>Optimized strategies to boost revenue and growth.</p>
-      </div>
-      <div class="service-card" data-name="Business Development">
-        <div class="service-icon" style="background-image:url('icon-business.png');"></div>
-        <h3>Business Development</h3>
-        <p>Structured plans to expand your business.</p>
-      </div>
-      <div class="service-card" data-name="Finance">
-        <div class="service-icon" style="background-image:url('icon-finance.png');"></div>
-        <h3>Finance & Accounts</h3>
-        <p>Professional finance and accounting solutions.</p>
-      </div>
-      <div class="service-card" data-name="MIS">
-        <div class="service-icon" style="background-image:url('icon-mis.png');"></div>
-        <h3>MIS / Management Systems</h3>
-        <p>Integrated systems for smooth operations.</p>
-      </div>
-      <div class="service-card" data-name="Banking">
-        <div class="service-icon" style="background-image:url('icon-banking.png');"></div>
-        <h3>Banking / Loans</h3>
-        <p>Expert guidance on loans and banking.</p>
-      </div>
-      <div class="service-card" data-name="Growing Business">
-        <div class="service-icon" style="background-image:url('icon-grow.png');"></div>
-        <h3>Growing Business</h3>
-        <p>Strategies to scale and grow your business.</p>
-      </div>
-      <div class="service-card" data-name="Cashflow">
-        <div class="service-icon" style="background-image:url('icon-cashflow.png');"></div>
-        <h3>Cashflow</h3>
-        <p>Efficient cash flow management for stability.</p>
-      </div>
-      <div class="service-card" data-name="Collections">
-        <div class="service-icon" style="background-image:url('icon-collections.png');"></div>
-        <h3>Collections</h3>
-        <p>Optimize collections and reduce outstanding debts.</p>
-      </div>
-      <div class="service-card" data-name="IPO">
-        <div class="service-icon" style="background-image:url('icon-ipo.png');"></div>
-        <h3>IPO (Mainframe & SME)</h3>
-        <p>Guidance on IPOs for large and SME companies.</p>
-      </div>
-      <div class="service-card" data-name="CA/CFO Services">
-        <div class="service-icon" style="background-image:url('icon-ca.png');"></div>
-        <h3>CA / CFO / CEO Services</h3>
-        <p>Part-time contract support for CA, CFO, CEO tasks.</p>
-      </div>
-    </div>
+  <!-- Marquee Container -->
+  <div class="services-marquee">
+    <div class="marquee-track">
+      <!-- Repeat hollow divs for looping -->
+      <span class="service-icon">Sales</span>
+      <span class="service-icon">Business</span>
+      <span class="service-icon">Finance</span>
+      <span class="service-icon">MIS</span>
+      <span class="service-icon">Banking</span>
+      <span class="service-icon">Growth</span>
+      <span class="service-icon">Cashflow</span>
+      <span class="service-icon">Collections</span>
+      <span class="service-icon">IPO</span>
+      <span class="service-icon">CA/CFO/CEO</span>
 
-    <!-- Icon Grid -->
-    <div class="service-icons">
-      <!-- will populate icons dynamically with random sizes -->
+      <!-- Repeat for smooth loop -->
+      <span class="service-icon">Sales</span>
+      <span class="service-icon">Business</span>
+      <span class="service-icon">Finance</span>
+      <span class="service-icon">MIS</span>
+      <span class="service-icon">Banking</span>
+      <span class="service-icon">Growth</span>
+      <span class="service-icon">Cashflow</span>
+      <span class="service-icon">Collections</span>
+      <span class="service-icon">IPO</span>
+      <span class="service-icon">CA/CFO/CEO</span>
     </div>
   </div>
 
@@ -746,6 +676,7 @@ nav ul li a:hover {
     </button>
   </div>
 </section>
+
   <!-- Extra Visuals Section -->
   <section id="extra" class="extra-visuals" aria-labelledby="extra-heading">
     <h2 id="extra-heading">Inspire. Create. Transform.</h2>
