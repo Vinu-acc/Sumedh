@@ -363,52 +363,49 @@ nav ul li a:hover {
   }
 }
     /* Extra Visuals Section */
+
 .why-us-section {
   padding: 60px 20px;
   width: 100%;
   max-width: 1200px;
-  margin: 40px auto; /* spacing from top/bottom */
+  margin: 40px auto;
   border-radius: 30px;
-    background-image: url('https://img.freepik.com/premium-vector/navy-chrome-white-luxury-sharp-background_78370-726.jpg');
+  background-image: url('https://img.freepik.com/premium-vector/navy-chrome-white-luxury-sharp-background_78370-726.jpg');
   background-size: cover;
   background-position: center;
-  border-radius: 30px;
   overflow: hidden;
 }
 
 .why-us-container {
   display: flex;
-  gap: 40px;
-  align-items: left;
+  align-items: flex-start; /* correct value */
+  justify-content: flex-start;
   flex-wrap: wrap;
   padding: 20px;
-  margin:0px 25px;
 }
 
-/* Left side content */
+/* Left side content - occupy ~2/3 */
 .why-us-content {
-  flex: 2; /* wider side */
+  flex: 2;
   min-width: 300px;
+  max-width: 66%;
+  color: var(--text-light); /* readable on dark bg */
   animation: fadeSlideIn 1s ease forwards;
-  color: var(--text-light);
+  text-align: left; /* left aligned content */
 }
 
 /* Headings and text */
 .why-us-content h2 {
-  text-align:right;
   font-size: 2rem;
-  color: #000000;
+  color: var(--accent); /* readable and accent color */
   margin-bottom: 20px;
-  margin:left:40px
 }
 
 .why-us-content p {
-   text-align:right;
   font-size: 1rem;
-  color: #000000;
+  color: var(--text-light);
   margin-bottom: 15px;
   line-height: 1.8;
-    margin:left:40px
 }
 
 /* Fade in from bottom animation */
@@ -417,25 +414,18 @@ nav ul li a:hover {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive: stack on small screens */
+/* Responsive for small screens */
 @media(max-width:768px){
   .why-us-container {
     flex-direction: column;
-    gap: 20px;
-    padding: 0px;
-    margin:0px 20px;
-  }
-  .why-us-image {
-    width: 80%;
-    height: 250px;
-    margin: 0 auto;
+    padding: 10px;
   }
   .why-us-content {
     width: 100%;
+    max-width: 100%;
     text-align: center;
   }
 }
-
 
     /* Testimonials */
     .testimonials {
@@ -675,8 +665,7 @@ nav ul li a:hover {
   </section>
 
   <!--extra section again-->
-    /*extra section again*/
-<section id="why-us" class="why-us-section">
+  <section id="why-us" class="why-us-section">
   <div class="why-us-container">
     <!-- Left Content -->
     <div class="why-us-content">
@@ -684,13 +673,8 @@ nav ul li a:hover {
       <p>Taking the right guidance and consulting services can make a huge difference in growing your business. Our team offers expert advice on sales, finance, cash flow management, and overall business strategy to help your company reach its full potential.</p>
       <p>With professional support from experienced consultants, you can optimize operations, improve decision-making, and achieve sustainable growth. Don’t navigate business challenges alone — leverage our expertise and take your business to the next level.</p>
     </div>
-
- 
   </div>
 </section>
-
-
-
 
   <!-- Testimonials -->
   <section id="testimonials" class="testimonials" aria-labelledby="testimonials-heading" role="region">
