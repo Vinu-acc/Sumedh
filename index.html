@@ -77,8 +77,6 @@
     /* Navbar */
 
 /* Navbar Base */
-
-/* Navbar */
 nav {
   display: flex;
   justify-content: space-between;
@@ -96,7 +94,6 @@ nav .brand {
   font-size: 1.6rem;
   color: var(--accent);
   letter-spacing: 1px;
-  font-family: "Merriweather", serif;
 }
 
 nav ul {
@@ -105,91 +102,73 @@ nav ul {
   list-style: none;
 }
 
+nav ul li {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
 nav ul li a {
   color: var(--white);
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 15px;
-  transition: all 0.3s ease;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  background: var(--accent-light);
-  color: var(--navy);
+  color: var(--accent-light);
 }
 
 /* Hamburger */
-/* Hamburger icon styling */
 .hamburger {
-  display: none; /* show only on small screens */
+  display: none;
   flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 22px;
+  gap: 5px;
   cursor: pointer;
 }
 
 .hamburger span {
   display: block;
+  width: 25px;
   height: 3px;
-  width: 100%;
-  background: #00bfff;
+  background: var(--white);
   border-radius: 3px;
   transition: all 0.3s ease;
 }
 
-/* Hamburger open state (turns into X) */
-.hamburger.open span:nth-child(1) {
-  transform: rotate(45deg) translateY(8px);
-}
-
-.hamburger.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.open span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-8px);
-}
-
-/* Show menu on small screens */
-@media (max-width:768px) {
-  .hamburger { display: flex; }
+/* Mobile Responsive */
+@media (max-width: 768px) {
   nav ul {
-    display: none;
-    flex-direction: column;
-    gap: 15px;
     position: absolute;
-    top: 60px;
-    right: 20px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 6px 24px rgba(0,192,255,0.3);
+    top: 100%;
+    right: 0;
+    background: var(--dark-navy);
+    width: 200px;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    display: none;
   }
-  nav ul.show { display: flex;
-              animation: slideIn 0.5s ease forwards;
-}
+
+  nav ul.show {
+    display: flex;
+  }
 
   .hamburger {
     display: flex;
   }
-
-  nav ul li a {
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
-  }
 }
 
-/* Slide-in animation */
-@keyframes slideIn {
-  from {transform: translateY(-100%);}
-  to {transform: translateY(0);}
+/* Hamburger animation when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
 }
-
-/* Hero Section */
- .hero {
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+    /* Hero */
+    .hero {
       background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center center fixed no-repeat;
       background-size: cover;
       min-height: 85vh;
@@ -211,64 +190,50 @@ nav ul li a:hover {
       z-index: -1;
       border-radius: 0;
     }
-.hero .content {
-  max-width: 600px;
-  text-align: center;
-  color: var(--white);
-  animation: fadeSlideIn 1.5s ease forwards;
-  opacity: 0;
-  transform: translateY(50px);
-}
-
-.hero h1 {
-  font-size: 4.2rem;
-  margin-bottom: 1rem;
-  line-height: 1.1;
+    .hero .content {
+      max-width: 600px;
+      animation: fadeSlideIn 1.5s ease forwards;
+      opacity: 0;
+      transform: translateX(-50px);
+      color: var(--white);
+      position: sticky;
+      top: 20vh;
+    }
+    
+.merriweather-heading {
   font-family: "Merriweather", serif;
-  font-weight: 700;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
-
-.hero p {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
-  color: var(--accent-light);
-}
-
-.hero .btn-primary {
-  padding: 1rem 2rem;
-  background: var(--accent);
-  color: var(--navy);
-  font-weight: 700;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 24px rgba(0, 192, 255, 0.6);
-}
-.hero .btn-primary:hover {
-  background: var(--accent-light);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0,192,255,0.6);
-}
-
-/* Hero fadeSlideIn animation */
-@keyframes fadeSlideIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive Hero */
-@media (max-width:768px){
-  .hero h1 {
-    font-size: 5.5rem; /* ~1.3x larger on small screens */
-  }
-  .hero p {
-    font-size: 1.5rem;
-  }
-}
+    .hero h1 {
+      font-size: 4.2rem;
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      color: var(--accent-light);
+    }
+    .hero .btn-primary {
+      padding: 1rem 2rem;
+      background: var(--accent);
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 6px 24px rgba(0, 192, 255, 0.6);
+    }
+    .hero .btn-primary:hover {
+      background: var(--accent-light);
+    }
 
     /* About Section with sticky text and scrolling images */
     .about {
@@ -601,7 +566,6 @@ nav ul li a:hover {
 <body>
 
 <!-- Navbar -->
-
 <nav role="navigation" aria-label="Main Navigation">
   <div class="brand">BlueWave</div>
 
@@ -618,17 +582,18 @@ nav ul li a:hover {
     <li><a href="#features">Features</a></li>
     <li><a href="#extra">Explore</a></li>
     <li><a href="#testimonials">Testimonials</a></li>
-    <li><a href="#cta" style="background:#fff; color:#00bfff;">Get Started</a></li>
+    <li><a href="#cta">Get Started</a></li>
   </ul>
 </nav>
 
-<section id="hero" class="hero" role="banner">
-  <div class="content">
-    <h1 class="heading">Empower Your Digital Presence</h1>
-    <p>Custom tailored solutions designed for your success</p>
-    <button class="btn-primary" onclick="location.href='#cta'">Get Started</button>
-  </div>
-</section>
+  <!-- Hero Section -->
+  <section id="hero" class="hero" role="banner">
+    <div class="content">
+      <h1 class="heading">Empower Your Digital Presence</h1>
+      <p>Custom tailored solutions designed for your success</p>
+      <button class="btn-primary" onclick="location.href='#cta'">Get Started</button>
+    </div>
+  </section>
 
   <!-- About Section -->
   <section id="about" class="about" aria-labelledby="about-heading">
@@ -736,23 +701,5 @@ hamburger.addEventListener('click', () => {
   navMenu.classList.toggle('show');
 });
 </script>
-  <script>
-const hamburger = document.querySelector('.hamburger');
-const menu = document.querySelector('nav ul');
-
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open'); // animate hamburger to X
-  menu.classList.toggle('show');       // show/hide menu
-});
-
-// Optional: close menu when a link is clicked
-document.querySelectorAll('nav ul li a').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    menu.classList.remove('show');
-  });
-});
-</script>
-
 </body>
 </html>
