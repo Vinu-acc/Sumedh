@@ -406,7 +406,7 @@ nav ul li a:hover {
 
     /* Call to Action */
     .call-to-action {
-      background-color: var(--accent);
+      background-color: #ffffff;
       color: var(--navy);
       padding: 3rem 1.5rem;
       text-align: center;
@@ -422,7 +422,7 @@ nav ul li a:hover {
     }
     .call-to-action button {
       background-color: var(--navy);
-      color: var(--accent);
+      color: #ffffff;
       font-weight: 700;
       font-size: 1.2rem;
       padding: 1rem 3rem;
@@ -436,45 +436,56 @@ nav ul li a:hover {
       color: var(--white);
     }
 
-
+/*why choose us*/
 .why-us-section {
   padding: 60px 20px;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 40px auto;
+  border-radius: 30px;
+  background-image: url('https://img.freepik.com/premium-vector/navy-chrome-white-luxury-sharp-background_78370-726.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
 }
 
 .why-us-container {
   display: flex;
-  gap: 40px;
   align-items: flex-start;
+  justify-content: flex-end; /* push content to right */
   flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
 }
 
-/* Left side content */
+/* Empty space on the left */
+.why-us-empty {
+  flex: 1; /* 1/3 width */
+  min-width: 150px;
+}
+
+/* Right side content */
 .why-us-content {
-  flex: 2; /* wider side */
+  flex: 2; /* 2/3 width */
   min-width: 300px;
+  max-width: 66%;
+  color: #000000; /* black text */
+  text-align: right; /* align text to right */
   animation: fadeSlideIn 1s ease forwards;
 }
 
+/* Headings and text */
 .why-us-content h2 {
   font-size: 2rem;
-  color: var(--accent);
   margin-bottom: 20px;
+  color:#000000;
 }
 
 .why-us-content p {
   font-size: 1rem;
-  color: var(--text-light);
   margin-bottom: 15px;
   line-height: 1.8;
-}
-
-/* Right side empty space (can be used for visuals later) */
-.why-us-empty {
-  flex: 1; /* narrower side */
-  min-width: 150px;
+  color:#000000;
 }
 
 /* Fade in from bottom animation */
@@ -483,20 +494,22 @@ nav ul li a:hover {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive: stack content on small screens */
+/* Responsive for small screens */
 @media(max-width:768px){
   .why-us-container {
     flex-direction: column;
-    gap: 20px;
-  }
-  .why-us-content {
-    width: 100%;
+    padding: 10px;
+    justify-content: center;
   }
   .why-us-empty {
     display: none;
   }
+  .why-us-content {
+    width: 100%;
+    max-width: 100%;
+    text-align: right;
+  }
 }
-
 
 
     /* Testimonials */
@@ -636,6 +649,118 @@ nav ul li a:hover {
         font-size: 1rem;
       }
     }
+    /*services*/
+    /* Services section — simple, responsive grid. NO marquee styles included. */
+/* Section */
+.services-section {
+  padding: 28px 16px;
+  background: linear-gradient(180deg, rgba(1,10,34,0.95), rgba(2,18,45,0.95));
+}
+.services-container {
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 12px;
+}
+.services-section h2 {
+  font-family: "Roboto", sans-serif;
+  color: var(--accent);
+  margin-bottom: 6px;
+  font-size: 1.8rem;
+}
+.services-section .lead {
+  color: var(--muted);
+  margin-bottom: 18px;
+  font-size: 0.99rem;
+}
+
+/* Grid of cards (wraps responsively) */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+/* Card */
+.service-card {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(64,207,255,0.06);
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+  outline: none;
+}
+.service-card:focus,
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(0,192,255,0.08);
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+}
+
+/* Icon */
+.service-icon {
+  width:56px;
+  height:56px;
+  min-width:56px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(135deg, rgba(0,192,255,0.04), rgba(64,207,255,0.02));
+  border: 1px solid rgba(0,192,255,0.06);
+  flex-shrink:0;
+}
+
+/* Text */
+.service-info { flex:1; min-width:0; display:flex; flex-direction:column; gap:6px; }
+.service-info h3 { font-size:1rem; margin:0; color:var(--white); }
+.service-subline { color: var(--muted); font-size:0.86rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.service-desc {
+  margin:0;
+  color:var(--muted);
+  font-size:0.9rem;
+  max-height:0;
+  overflow:hidden;
+  opacity:0;
+  transform: translateY(-6px);
+  transition: max-height .32s ease, opacity .28s ease, transform .28s ease;
+}
+
+/* Active/expanded card */
+.service-card.active {
+  /* visually highlighted */
+  border-color: rgba(64,207,255,0.12);
+  box-shadow: 0 22px 68px rgba(0,192,255,0.12);
+}
+.service-card.active .service-desc {
+  max-height: 400px; /* enough to show the paragraph */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CTA button inside section */
+.services-cta { text-align:center; margin-top:18px; }
+.btn-primary {
+  background: var(--accent);
+  color: var(--navy);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .18s ease, background .18s ease;
+}
+.btn-primary:hover { background: var(--accent-light); transform: translateY(-3px); }
+
+/* Responsive tweaks */
+@media (max-width:600px) {
+  .service-icon { width:48px; height:48px; min-width:48px; }
+  .service-desc { font-size:0.92rem; }
+  .services-section { padding:20px 12px; }
+}
   </style>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -655,7 +780,7 @@ nav ul li a:hover {
 
 <!-- Navbar -->
 <nav role="navigation" aria-label="Main Navigation">
-  <div class="brand">BlueWave</div>
+  <div class="brand">Baghla Research and Analytics </div>
 
   <!-- Hamburger Icon -->
   <div class="hamburger">
@@ -701,6 +826,110 @@ nav ul li a:hover {
     </div>
   </section>
 
+  <!--services-->
+
+<section id="services" class="services-section" aria-labelledby="services-heading">
+  <div class="services-container">
+    <h2 id="services-heading">Our Services</h2>
+    <p class="lead">Business & Management Consultancy — Book a Zoom session now!</p>
+
+    <!-- Responsive grid (no marquee) -->
+    <div class="services-grid" role="list" aria-label="List of services">
+      <article class="service-card" role="button" tabindex="0" aria-pressed="false" data-index="0">
+        <div class="service-icon" aria-hidden="true">
+          <!-- small inline SVG icon -->
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="7" width="20" height="12" rx="2" fill="#40cfff22"/>
+            <path d="M7 7V4h10v3" stroke="#00c0ff33" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3>Sales</h3>
+          <div class="service-subline">Drive revenue with modern sales processes</div>
+          <p class="service-desc">Design and implement high-converting sales funnels, training, CRM setup and KPI dashboards tailored to your market and team.</p>
+        </div>
+      </article>
+
+      <article class="service-card" role="button" tabindex="0" aria-pressed="false" data-index="1">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="8" r="3" fill="#40cfff22"/>
+            <path d="M5 20c1.5-6 6-8 7-8s5.5 2 7 8" stroke="#00c0ff33" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3>Business Development</h3>
+          <div class="service-subline">Partnerships, strategy & expansion</div>
+          <p class="service-desc">Identify new channels, create partnership strategies and build go-to-market plans that accelerate growth.</p>
+        </div>
+      </article>
+
+      <article class="service-card" role="button" tabindex="0" aria-pressed="false" data-index="2">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="4" width="18" height="16" rx="2" fill="#40cfff22"/>
+            <path d="M8 10h8M8 14h8" stroke="#00c0ff33" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3>Finance & Accounts</h3>
+          <div class="service-subline">Accurate accounting & financial control</div>
+          <p class="service-desc">From bookkeeping to CFO advisory — robust finance processes, budgeting and financial modelling for funding readiness.</p>
+        </div>
+      </article>
+
+      <article class="service-card" role="button" tabindex="0" aria-pressed="false" data-index="3">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 6h18M6 6v12" stroke="#00c0ff33" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="8" y="9" width="10" height="6" rx="1" fill="#40cfff22"/>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3>MIS & Dashboards</h3>
+          <div class="service-subline">Data-driven decision making</div>
+          <p class="service-desc">We build MIS, reporting pipelines and dashboards that deliver timely insights for leadership and operations teams.</p>
+        </div>
+      </article>
+
+      <article class="service-card" role="button" tabindex="0" aria-pressed="false" data-index="4">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3l8 5v2H4V8l8-5z" fill="#40cfff22"/>
+            <path d="M5 12h14v6a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-6z" stroke="#00c0ff33" stroke-width="1.2"/>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3>Banking & Loans</h3>
+          <div class="service-subline">Funding advisory & relationships</div>
+          <p class="service-desc">Assistance with term loans, working capital, banking relationships and preparing documents for institutions.</p>
+        </div>
+      </article>
+
+      <article class="service-card" role="button" tabindex="0" aria-pressed="false" data-index="5">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 17l6-6 4 4 8-8" stroke="#00c0ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3>Growth Strategy</h3>
+          <div class="service-subline">Scale your business sustainably</div>
+          <p class="service-desc">Market entry playbooks, pricing, customer acquisition and retention strategies to sustainably grow revenues and margins.</p>
+        </div>
+      </article>
+
+      <!-- add more cards as needed -->
+    </div>
+
+    <div class="services-cta" aria-hidden="false">
+      <button class="btn-primary" onclick="location.href='#cta'">Book A Session Now!</button>
+    </div>
+  </div>
+</section>
+
+
+
   <!-- Features Section -->
 <section id="about" class="about-section">
   <div class="about-container">
@@ -711,9 +940,10 @@ nav ul li a:hover {
 
     <!-- Right Column: Info -->
     <div class="about-info">
-      <h2>About Vinashree Meshram</h2>
-      <p>Hello! I am Vinashree Meshram, an MCA student passionate about data analytics and business process optimization. I have worked on projects and internships focused on generating insights and driving business improvements. My goal is to help organizations leverage data to make better decisions and achieve their objectives.</p>
-      <p>With skills in Python, Excel, Power BI, and MySQL, I combine technical expertise with practical business knowledge. I am also comfortable with presentations, communication, and stakeholder management.</p>
+      <h2>Sumedh Baghla</h2>
+      <p>Sumedh Baghla is an experienced advisor specializing in business strategy, finance and operational scaling. He partners closely with leadership teams to build robust systems and measurable growth playbooks.
+
+Services include fractional CFO advisory, MIS & reporting, fundraising preparation and strategic commercial initiatives.</p>
     </div>
   </div>
 </section>
@@ -738,17 +968,17 @@ nav ul li a:hover {
 
   <!--extra section again-->
     /*extra section again*/
-    <section id="why-us" class="why-us-section">
+   <section id="why-us" class="why-us-section">
   <div class="why-us-container">
-    <!-- Left Content -->
+    <!-- Empty space on the left -->
+    <div class="why-us-empty"></div>
+
+    <!-- Right side content -->
     <div class="why-us-content">
       <h2>Why Choose Us?</h2>
       <p>Taking the right guidance and consulting services can make a huge difference in growing your business. Our team offers expert advice on sales, finance, cash flow management, and overall business strategy to help your company reach its full potential.</p>
       <p>With professional support from experienced consultants, you can optimize operations, improve decision-making, and achieve sustainable growth. Don’t navigate business challenges alone — leverage our expertise and take your business to the next level.</p>
     </div>
-
-    <!-- Right empty space for design -->
-    <div class="why-us-empty"></div>
   </div>
 </section>
 
@@ -792,8 +1022,85 @@ hamburger.addEventListener('click', () => {
   navMenu.classList.toggle('show');
 });
  
-/* JS will handle active slide scaling */
+/* JS will handle active slide scaling services*/
 
-</script>
+    // Lightweight JS to handle expand/collapse and keyboard accessibility for service cards.
+// No marquee behavior included.
+
+document.addEventListener('DOMContentLoaded', function () {
+  const cards = Array.from(document.querySelectorAll('.service-card'));
+
+  if (!cards.length) return;
+
+  cards.forEach(card => {
+    // Toggle function
+    const toggle = (ev) => {
+      // prevent default to avoid unexpected navigation/scroll behavior
+      if (ev && typeof ev.preventDefault === 'function') ev.preventDefault();
+      ev && ev.stopPropagation && ev.stopPropagation();
+
+      // if card is already active, collapse it
+      const isActive = card.classList.contains('active');
+
+      // collapse all others
+      cards.forEach(c => {
+        if (c !== card) {
+          c.classList.remove('active');
+          c.setAttribute('aria-pressed', 'false');
+        }
+      });
+
+      if (isActive) {
+        card.classList.remove('active');
+        card.setAttribute('aria-pressed', 'false');
+      } else {
+        card.classList.add('active');
+        card.setAttribute('aria-pressed', 'true');
+        // try to keep focus visible without forcing vertical scroll
+        try {
+          card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+        } catch (e) {
+          // ignore if not supported
+        }
+      }
+    };
+
+    // Click
+    card.addEventListener('click', toggle);
+
+    // Keyboard: Enter or Space toggles
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle(e);
+      }
+      // Arrow keys navigate between cards
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        const next = cards[(cards.indexOf(card) + 1) % cards.length];
+        next.focus();
+      }
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        const prev = cards[(cards.indexOf(card) - 1 + cards.length) % cards.length];
+        prev.focus();
+      }
+    });
+
+    // Prevent accidental focus outline removal for mouse users while keeping keyboard focus visible
+    card.addEventListener('mousedown', () => card.classList.add('mouse-pressed'));
+    card.addEventListener('mouseup', () => setTimeout(() => card.classList.remove('mouse-pressed'), 150));
+  });
+
+  // Close any open card when clicking outside the grid
+  document.addEventListener('click', (e) => {
+    const grid = document.querySelector('.services-grid');
+    if (!grid) return;
+    if (!grid.contains(e.target)) {
+      cards.forEach(c => { c.classList.remove('active'); c.setAttribute('aria-pressed', 'false'); });
+    }
+  });
+});
+  </script>
 </body>
 </html>
