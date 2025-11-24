@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Baghla Research and Analytics</title>
-
+  <title>Stunning Deep Navy Blue Website</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-
   <style>
     /* Updated Color palette */
     :root {
@@ -20,26 +18,54 @@
       --text-light: #ffffff;
       --text-dark: #a0a9c0;
       --white: #ffffff;
-      --muted: rgba(255,255,255,0.7);
     }
 
     /* Reset and base */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html,body { height: 100%; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
       font-family: 'Poppins', sans-serif;
       background-color: var(--navy);
       color: var(--text-light);
       line-height: 1.6;
       min-height: 100vh;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
     }
-    img { max-width: 100%; display:block; border-radius: 12px; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    h1,h2,h3 { font-family: 'Roboto', sans-serif; font-weight:700; color:var(--white); }
-    p { color: var(--text-light); font-weight:300; }
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1, h2, h3 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      color: var(--white);
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      color: var(--text-light);
+      font-weight: 300;
+    }
 
     /* Container */
     .container {
@@ -49,334 +75,271 @@
     }
 
     /* Navbar */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 1.5rem;
-      background-color: var(--dark-navy);
-      position: sticky;
-      top: 0;
-      z-index: 1100; /* slightly higher to ensure sticky on top */
-      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
-      margin: 0; /* ensure no margin outside nav interfering */
-    }
-    nav .brand { font-weight:700; font-size:1.6rem; color:var(--accent); letter-spacing:1px; }
-    nav ul { display:flex; gap:1.5rem; list-style:none; }
-    nav ul li { font-weight:600; font-size:1rem; }
-    nav ul li a { color:var(--white); }
-    nav ul li a:hover { color:var(--accent-light); }
 
-    /* Hamburger */
-    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; }
-    .hamburger span { display:block; width:25px; height:3px; background:var(--white); border-radius:3px; transition:all 0.3s ease; }
+/* Navbar Base */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--dark-navy);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
 
-    /* Mobile Responsive */
-    @media (max-width: 768px) {
-      nav ul {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background: var(--dark-navy);
-        width: 220px;
-        flex-direction: column;
-        padding: 1rem;
-        gap: 1rem;
-        display: none;
-      }
-      nav ul.show { display:flex; }
-      .hamburger { display:flex; }
-      .hero h1 { font-size: 2.4rem; }
-    }
+nav .brand {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
 
-    /* Hamburger animation when active */
-    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-    .hamburger.active span:nth-child(2) { opacity: 0; }
-    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
 
+nav ul li {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--accent-light);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: var(--white);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--dark-navy);
+    width: 200px;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    display: none;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  .hero h1 {
+    font-size:4.6rem;
+  }
+}
+
+/* Hamburger animation when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
     /* Hero */
     .hero {
       background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center center fixed no-repeat;
       background-size: cover;
       min-height: 85vh;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:flex-start;
-      color:var(--white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      color: var(--white);
       padding: 0 1.5rem;
-      text-shadow: 0 4px 12px rgba(0,0,0,0.85);
-      position:relative;
-      z-index:1;
-      margin: 0; /* ensure no margin around hero */
+      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.85);
+      position: relative;
+      z-index: 1;
     }
     .hero::after {
-      content:"";
-      position:absolute;
-      top:0;left:0;right:0;bottom:0;
-      background: rgba(2,18,45,0.7);
-      z-index:-1;
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(2, 18, 45, 0.7);
+      z-index: -1;
+      border-radius: 0;
     }
     .hero .content {
       max-width: 600px;
       animation: fadeSlideIn 1.5s ease forwards;
       opacity: 0;
       transform: translateX(-50px);
-      color:var(--white);
-      position:relative;
-      padding: 4rem 0;
+      color: var(--white);
+      position: sticky;
+      top: 20vh;
     }
-    .merriweather-heading { font-family:"Merriweather", serif; font-weight:600; }
-    .hero h1 { font-size:4.2rem; margin-bottom:1rem; line-height:1.05; }
-
-    /* Increase hero h1 font size on small screens as requested */
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 3rem !important; }
+    
+.merriweather-heading {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+    .hero h1 {
+      font-size: 4.2rem;
+      margin-bottom: 1rem;
+      line-height: 1.1;
     }
-
-    .hero p { font-size:1.3rem; font-weight:400; margin-bottom:1.25rem; color:var(--accent-light); }
-
-    .btn-primary {
+    .hero p {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      color: var(--accent-light);
+    }
+    .hero .btn-primary {
       padding: 1rem 2rem;
       background: var(--accent);
       color: var(--navy);
-      font-weight:700;
-      font-size:1.05rem;
-      border:none;
-      border-radius:30px;
-      cursor:pointer;
-      transition: background 0.25s ease, transform 0.2s ease;
-      box-shadow: 0 6px 24px rgba(0,192,255,0.6);
+      font-weight: 700;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 6px 24px rgba(0, 192, 255, 0.6);
     }
-    .btn-primary:hover { background:var(--accent-light); transform: translateY(-3px); }
-
-    /* Shared section CTA */
-    .section-cta { text-align:center; margin: 20px 0 32px 0; }
-    .section-cta .btn-primary { padding: 10px 20px; font-size: 1rem; }
+    .hero .btn-primary:hover {
+      background: var(--accent-light);
+    }
 
     /* About Section with sticky text and scrolling images */
     .about {
       background-color: var(--dark-navy);
       padding: 4rem 1.5rem;
-      display:flex;
-      gap:3rem;
-      color:var(--white);
-      align-items:flex-start;
+      display: flex;
+      gap: 3rem;
+      color: var(--white);
     }
-    .about .text { flex:1; position:sticky; top:18vh; height:max-content; padding-right:1.5rem; }
-    .about .text h2 { color:var(--accent); margin-bottom:1rem; }
-    .about .text p { font-size:1.1rem; font-weight:400; line-height:1.5; }
+    .about .text {
+      flex: 1;
+      position: sticky;
+      top: 20vh;
+      height: max-content;
+      padding-right: 1.5rem;
+    }
+    .about .text h2 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .about .text p {
+      font-size: 1.1rem;
+      font-weight: 400;
+      line-height: 1.5;
+    }
     .about .images {
-      flex:2;
-      position:relative;
-      width:100%;
-      height: 400px;
-      padding-left:1rem;
+      flex: 2;
+      position: relative;
+      width: 100%;
+      height: 400px; /* fixed height for slider */
+      padding-left: 1rem;
       border-left: 1px solid var(--accent);
-      overflow:hidden;
-      display:block;
+      overflow: hidden;
+      display: block;
     }
     .about .images img {
-      position:absolute;
-      top:0; left:0; width:100%; height:400px;
-      object-fit:cover;
-      border-radius:16px;
-      box-shadow: 0 8px 24px rgba(0,192,255,0.5);
-      cursor:pointer;
-      opacity:0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 192, 255, 0.5);
+      cursor: pointer;
+      opacity: 0;
       transition: opacity 1s ease-in-out;
     }
-    .about .images img.active { opacity:1; position:relative; }
-
-    /* Profile / About-person Section */
-    .about-section {
-      padding: 60px 20px;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .about-container {
-      display:flex;
-      gap:40px;
-      align-items:center;
-      justify-content:center;
-      flex-wrap:wrap;
-    }
-    .about-image { flex:1; min-width:300px; max-width:400px; animation: fadeSlideIn 1s ease forwards; }
-    .about-image img { width:100%; border-radius:20px; box-shadow:0 6px 20px rgba(255,255,255,0.08); object-fit:cover; }
-    .about-info { flex:2; min-width:280px; animation: fadeSlideIn 1s ease forwards; animation-delay:0.3s; color:var(--text-light); }
-    .about-info h2 { font-size:2rem; color:var(--accent); margin-bottom:12px; }
-    .about-info p { font-size:1rem; color:var(--text-light); margin-bottom:15px; }
-
-    /* Extra Visuals Section */
-    .extra-visuals {
-      padding: 40px 1.5rem;
-      max-width: 1200px;
-      margin: 40px auto;
-      color: var(--white);
-    }
-    .extra-visuals h2 { font-size:2rem; color:var(--accent); margin-bottom:8px; text-align:center; }
-    .extra-visuals p { color:var(--muted); text-align:center; margin-bottom:18px; }
-
-    .extra-visuals-images {
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 16px;
-      align-items:stretch;
-    }
-    .extra-visuals-images img {
-      width:100%;
-      height:160px;
-      object-fit:cover;
-      border-radius:12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    .about .images img.active {
+      opacity: 1;
+      position: relative;
     }
 
-    /* services - left as-is but remove outer container in HTML so we don't get container overrides */
-    .services-section {
-      padding: 2rem 1.5rem;
-      color: var(--white);
-    }
-    .services-section > h2 { color:var(--accent); margin-bottom:0.25rem; }
-    .services-section p.lead { color:var(--muted); margin-bottom:1rem; }
+  /* Features Section container */
+    
 
-    /* marquee container - hide scrollbar but keep scrolling */
-    .services-marquee {
-      background: linear-gradient(180deg, rgba(1,10,34,0.85), rgba(2,18,45,0.95));
-      border-radius: 16px;
-      padding: 14px;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scroll-snap-type: x mandatory;
-      display:block;
-      position:relative;
-      border: 1px solid rgba(64,207,255,0.08);
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-    .services-marquee::-webkit-scrollbar { display:none; }
-
-    .marquee-track { display:flex; gap:18px; align-items:stretch; padding:8px 12px; width:max-content; transition: transform 200ms ease; }
-    .service-item {
-      flex:0 0 auto;
-      width:240px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
-      border-radius:14px;
-      padding:12px;
-      color:var(--white);
-      display:flex;
-      gap:12px;
-      align-items:center;
-      scroll-snap-align:center;
-      transition: transform 260ms cubic-bezier(.2,.9,.3,1), width 260ms ease, box-shadow 260ms ease;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-      border: 1px solid rgba(0,192,255,0.06);
-      cursor: grab;
-      user-select: none;
-      outline: none;
-      scroll-margin-top: 18vh; /* avoid jumping to top when focused */
-    }
-    .service-item:active { cursor: grabbing; }
-    .service-icon { width:64px; height:64px; min-width:64px; min-height:64px; border-radius:12px; display:flex; align-items:center; justify-content:center; background: linear-gradient(135deg, rgba(0,192,255,0.06), rgba(64,207,255,0.03)); border:1px solid rgba(0,192,255,0.06); flex-shrink:0; }
-    .service-info { flex:1 1 auto; display:flex; flex-direction:column; gap:6px; min-width:0; }
-    .service-info h3 { font-size:1rem; margin:0; color:var(--white); }
-    .service-info p { margin:0; font-size:0.88rem; color:var(--muted); max-height:0; overflow:hidden; transition: max-height 300ms ease, opacity 300ms ease, transform 300ms ease; opacity:0; transform:translateY(-4px); }
-
-    .service-item.active { transform: scale(1.04); width:360px; box-shadow: 0 18px 60px rgba(0,192,255,0.18); border-color: rgba(0,192,255,0.18); }
-    .service-item.active .service-info p { max-height:240px; opacity:1; transform:translateY(0); }
-
-    .service-item:not(.active) .service-info .subline { display:block; color:var(--muted); font-size:0.82rem; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
-
-    .services-marquee:focus { outline: 2px dashed rgba(64,207,255,0.14); outline-offset:6px; }
-
-    /* Small screens */
-    @media (max-width: 768px) {
-      .service-item { width:200px; }
-      .service-item.active { width:300px; }
-      .service-icon { width:56px; height:56px; min-width:56px; }
-      .about { flex-direction:column; }
-      .about .text, .about .images { max-width:100%; position:static; height:auto; overflow:visible; border-left:none; padding-left:0; }
-      .about .images { height:auto; display:grid; grid-template-columns: repeat(1,1fr); gap:12px; }
-      .about .images img { position:static; height:200px; opacity:1; }
-      .hero h1 { font-size:2rem; }
-      .hero p { font-size:1rem; }
-      .extra-visuals h2 { font-size:1.5rem; }
-      .extra-visuals-images img { height:140px; }
-    }
-
-    /* large screens tweaks */
-    @media (min-width: 1200px) {
-      .services-marquee { padding: 20px; }
-      .marquee-track { gap: 20px; }
-      .service-item { width:260px; }
-      .service-item.active { width:380px; }
-    }
-
-    /* Testimonials & animation */
-    .testimonials {
-      background-color: var(--dark-navy);
-      padding: 4rem 1.5rem;
-      color:var(--text-light);
-      text-align:center;
-      max-width:1100px;
-      margin: 0 auto 4rem auto;
-      border-radius:20px;
-      box-shadow: 0 6px 24px rgba(0,192,255,0.5);
-    }
-    .testimonials h2 { margin-bottom:2.5rem; color:var(--accent); }
-
-    @keyframes fadeSlideIn { 0%{opacity:0; transform:translateY(40px)} 100%{opacity:1; transform:translateY(0)} }
- /*why us*/
-
-.why-us-section {
+.about-section {
   padding: 60px 20px;
   width: 100%;
   max-width: 1200px;
-  margin: 40px auto;
-  border-radius: 30px;
-  background-image: url('https://img.freepik.com/premium-vector/navy-chrome-white-luxury-sharp-background_78370-726.jpg');
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
+  margin: 0 auto;
 }
 
-.why-us-container {
+.about-container {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-end; /* push content to right */
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
-  padding: 20px;
-  gap: 20px;
 }
 
-/* Empty space on the left */
-.why-us-empty {
-  flex: 1; /* 1/3 width */
-  min-width: 150px;
-}
-
-/* Right side content */
-.why-us-content {
-  flex: 2; /* 2/3 width */
+/* Image with rounded corners and subtle white shadow */
+.about-image {
+  flex: 1;
   min-width: 300px;
-  max-width: 66%;
-  color: #000000; /* black text */
-  text-align: right; /* align text to right */
+  max-width: 400px;
   animation: fadeSlideIn 1s ease forwards;
 }
 
-/* Headings and text */
-.why-us-content h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color:#000000;
+.about-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+  object-fit: cover;
 }
 
-.why-us-content p {
+.about-info {
+  flex: 2;
+  min-width: 280px;
+  animation: fadeSlideIn 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.about-info h2 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.about-info p {
   font-size: 1rem;
+  color: var(--text-light);
   margin-bottom: 15px;
-  line-height: 1.8;
-  color:#000000;
 }
 
 /* Fade in from bottom animation */
@@ -385,171 +348,306 @@
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive for small screens */
+/* Responsive */
+@media (max-width:768px){
+  .about-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .about-image {
+    max-width: 80%;
+  }
+  .about-info {
+    width: 90%;
+    text-align: center;
+  }
+}
+    /* Extra Visuals Section */
+    .extra-visuals {
+      margin: 5rem 1.5rem;
+      background: linear-gradient(135deg, var(--dark-navy), var(--navy));
+      border-radius: 20px;
+      color: var(--white);
+      text-align: center;
+      padding: 3rem 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .extra-visuals h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--accent-light);
+    }
+    .extra-visuals p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+      color: var(--accent);
+    }
+    .extra-visuals-images {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .extra-visuals-images img {
+      flex: 1 1 180px;
+      max-width: 220px;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0, 192, 255, 0.4);
+      transition: transform 0.35s ease;
+      cursor: pointer;
+    }
+    .extra-visuals-images img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 40px rgba(0, 192, 255, 0.75);
+    }
+
+    /* Call to Action */
+    .call-to-action {
+      background-color: var(--accent);
+      color: var(--navy);
+      padding: 3rem 1.5rem;
+      text-align: center;
+      border-radius: 20px;
+      margin: 4rem 1.5rem 6rem 1.5rem;
+      box-shadow: 0 8px 20px rgba(0, 192, 255, 0.7);
+      animation: pulse 3s infinite ease-in-out;
+    }
+    .call-to-action h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .call-to-action button {
+      background-color: var(--navy);
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 1.2rem;
+      padding: 1rem 3rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .call-to-action button:hover {
+      background-color: var(--accent-light);
+      color: var(--white);
+    }
+
+
+.why-us-section {
+  padding: 60px 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-us-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Left side content */
+.why-us-content {
+  flex: 2; /* wider side */
+  min-width: 300px;
+  animation: fadeSlideIn 1s ease forwards;
+}
+
+.why-us-content h2 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.why-us-content p {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+/* Right side empty space (can be used for visuals later) */
+.why-us-empty {
+  flex: 1; /* narrower side */
+  min-width: 150px;
+}
+
+/* Fade in from bottom animation */
+@keyframes fadeSlideIn {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive: stack content on small screens */
 @media(max-width:768px){
   .why-us-container {
     flex-direction: column;
-    padding: 10px;
-    justify-content: center;
+    gap: 20px;
+  }
+  .why-us-content {
+    width: 100%;
   }
   .why-us-empty {
     display: none;
   }
-  .why-us-content {
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
-  }
 }
-</style>
-
- 
 
 
 
+    /* Testimonials */
+    .testimonials {
+      background-color: var(--dark-navy);
+      padding: 4rem 1.5rem;
+      color: var(--text-light);
+      text-align: center;
+      max-width: 1100px;
+      margin: 0 auto 4rem auto;
+      border-radius: 20px;
+      box-shadow: 0 6px 24px rgba(0, 192, 255, 0.5);
+    }
+    .testimonials h2 {
+      margin-bottom: 2.5rem;
+      color: var(--accent);
+    }
+    .testimonial-cards {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .testimonial-card {
+      background-color: var(--navy);
+      border-radius: 20px;
+      padding: 2rem;
+      width: 300px;
+      box-shadow: 0 4px 15px rgba(0, 192, 255, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeSlideUp 1s ease forwards;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: box-shadow 0.3s ease;
+      cursor: default;
+    }
+    .testimonial-card:hover {
+      box-shadow: 0 10px 40px rgba(0, 192, 255, 0.9);
+    }
+    .testimonial-avatar {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--accent);
+      margin-bottom: 1rem;
+    }
+    .testimonial-avatar img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    .testimonial-text {
+      font-style: italic;
+      color: var(--text-light);
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .testimonial-author {
+      font-weight: 600;
+      color: var(--white);
+    }
 
+    /* Footer */
+    footer {
+      background-color: var(--dark-navy);
+      padding: 1.5rem 1.5rem;
+      color: var(--text-dark);
+      text-align: center;
+      font-size: 0.9rem;
+      border-top: 1px solid var(--accent-light);
+      user-select: none;
+    }
+
+    /* Animations */
+    @keyframes fadeSlideIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes fadeSlideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 8px 20px rgba(0, 192, 255, 0.7);
+      }
+      50% {
+        box-shadow: 0 8px 42px rgba(0, 192, 255, 1);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
+      .testimonial-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+      .testimonial-card {
+        width: 90%;
+      }
+      .about {
+        flex-direction: column;
+      }
+      .about .text, .about .images {
+        max-width: 100%;
+        position: static;
+        height: auto;
+        overflow: visible;
+        border-left: none;
+      }
+      .about .images {
+        max-height: none;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .call-to-action h2 {
+        font-size: 1.8rem;
+      }
+      .call-to-action button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+      }
+    }
+  </style>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      // small convenience to update footer year
-      const yearEl = document.getElementById('year');
-      if (yearEl) yearEl.textContent = new Date().getFullYear();
+      const images = document.querySelectorAll(".about .images img");
+      let current = 0;
+      images[current].classList.add("active");
 
-      /* About images slider */
-      const aboutImages = document.querySelectorAll(".about .images img");
-      if (aboutImages && aboutImages.length) {
-        let idx = 0;
-        // ensure first is visible on small screens too
-        aboutImages.forEach((img,i) => img.classList.toggle('active', i === 0));
-        setInterval(() => {
-          aboutImages[idx].classList.remove("active");
-          idx = (idx + 1) % aboutImages.length;
-          aboutImages[idx].classList.add("active");
-        }, 3500);
-      }
-
-      /* Hamburger toggle (click + keyboard) */
-      const ham = document.querySelector('.hamburger');
-      const navUl = document.querySelector('nav ul');
-      if (ham && navUl) {
-        const toggle = () => {
-          ham.classList.toggle('active');
-          navUl.classList.toggle('show');
-        };
-        ham.addEventListener('click', toggle);
-        ham.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            toggle();
-          }
-        });
-      }
-
-      /* Services marquee interactions: drag, touch, keyboard, click-to-expand */
-      const marquee = document.getElementById('servicesMarquee');
-      const track = document.getElementById('marqueeTrack');
-      if (marquee && track) {
-        // Mouse dragging
-        let isDown = false;
-        let startX = 0;
-        let scrollLeft = 0;
-        marquee.addEventListener('mousedown', (e) => {
-          isDown = true;
-          marquee.classList.add('dragging');
-          startX = e.pageX - marquee.offsetLeft;
-          scrollLeft = marquee.scrollLeft;
-        });
-        marquee.addEventListener('mouseleave', () => { isDown = false; marquee.classList.remove('dragging'); });
-        marquee.addEventListener('mouseup', () => { isDown = false; marquee.classList.remove('dragging'); });
-        marquee.addEventListener('mousemove', (e) => {
-          if (!isDown) return;
-          e.preventDefault();
-          const x = e.pageX - marquee.offsetLeft;
-          const walk = (x - startX) * 1.5;
-          marquee.scrollLeft = scrollLeft - walk;
-        });
-
-        // Touch dragging for mobile
-        let touchStartX = 0;
-        let touchStartScroll = 0;
-        marquee.addEventListener('touchstart', (e) => {
-          touchStartX = e.touches[0].pageX;
-          touchStartScroll = marquee.scrollLeft;
-        }, {passive: true});
-        marquee.addEventListener('touchmove', (e) => {
-          const delta = e.touches[0].pageX - touchStartX;
-          marquee.scrollLeft = touchStartScroll - delta;
-        }, {passive: true});
-
-        // keyboard
-        marquee.addEventListener('keydown', (e) => {
-          if (e.key === 'ArrowRight') {
-            e.preventDefault();
-            marquee.scrollBy({ left: 220, behavior: 'smooth' });
-          } else if (e.key === 'ArrowLeft') {
-            e.preventDefault();
-            marquee.scrollBy({ left: -220, behavior: 'smooth' });
-          }
-        });
-
-        // Click-to-expand handling (with fixes to prevent page jump)
-        const items = track.querySelectorAll('.service-item');
-        items.forEach(item => {
-          item.setAttribute('tabindex', '0'); // make focusable
-
-          // prevent accidental page jump on click by preventing default and stopping propagation
-          item.addEventListener('click', (evt) => {
-            evt.preventDefault();
-            evt.stopPropagation();
-
-            // if dragging, ignore clicks
-            if (marquee.classList.contains('dragging')) return;
-
-            const alreadyActive = item.classList.contains('active');
-            // collapse any other open items
-            track.querySelectorAll('.service-item.active').forEach(a => {
-              if (a !== item) {
-                a.classList.remove('active');
-                a.setAttribute('aria-pressed', 'false');
-              }
-            });
-
-            if (alreadyActive) {
-              item.classList.remove('active');
-              item.setAttribute('aria-pressed', 'false');
-            } else {
-              item.classList.add('active');
-              item.setAttribute('aria-pressed', 'true');
-              // center horizontally in the marquee without forcing vertical scroll
-              // block: 'nearest' prevents vertical jump
-              try {
-                item.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-              } catch (err) {
-                // fallback: smooth horizontal scroll calculation
-                const itemCenter = item.offsetLeft + item.offsetWidth / 2;
-                const marqueeCenter = marquee.clientWidth / 2;
-                marquee.scrollTo({ left: Math.max(0, itemCenter - marqueeCenter), behavior: 'smooth' });
-              }
-            }
-          });
-
-          // keyboard interaction
-          item.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault();
-              item.click();
-            }
-          });
-
-          // ensure click doesn't immediately get consumed by drag start - small preventive measure
-          item.addEventListener('mousedown', (e) => {
-            // remove dragging class to allow click detection; actual dragging sets it back
-            marquee.classList.remove('dragging');
-          });
-        });
-      }
-
-      // Add small observers to make sure expanding doesn't cause layout jump (optional)
-      // (no-op - just kept to show intent for future improvements)
+      setInterval(() => {
+        images[current].classList.remove("active");
+        current = (current + 1) % images.length;
+        images[current].classList.add("active");
+      }, 3500); // Change image every 3.5 seconds
     });
   </script>
 </head>
@@ -557,306 +655,145 @@
 
 <!-- Navbar -->
 <nav role="navigation" aria-label="Main Navigation">
-  <div class="brand">Baghla Research and Analytics</div>
+  <div class="brand">BlueWave</div>
 
   <!-- Hamburger Icon -->
-  <div class="hamburger" aria-hidden="false" aria-label="Toggle menu" role="button" tabindex="0">
-    <span></span><span></span><span></span>
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 
   <ul>
     <li><a href="#hero">Home</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
+    <li><a href="#features">Features</a></li>
     <li><a href="#extra">Explore</a></li>
     <li><a href="#testimonials">Testimonials</a></li>
-    <li style="background-color:#00c0ff; border-radius:20px; padding:5px 10px;">
-      <a href="#cta" style="color:#010a22; text-decoration:none;">Get Started</a>
-    </li>
+   <li style="background-color:#00c0ff; border-radius:20px; padding:5px 10px;">
+  <a href="#cta" style="color:#010a22; text-decoration:none;">Get Started</a>
+</li>
+
   </ul>
 </nav>
 
-<!-- Hero Section -->
-<section id="hero" class="hero" role="banner">
-  <div class="content">
-    <h1 class="heading">Empower Your Digital Presence</h1>
-    <p>Custom tailored solutions designed for your success</p>
-    <button class="btn-primary" onclick="location.href='#cta'">Get Started</button>
-  </div>
-</section>
-
-  <div class="section-cta">
-    <button class="btn-primary" onclick="location.href='#cta'">Book A Session Now!</button>
-  </div>
-
-<!-- About Section -->
-<section id="about" class="about" aria-labelledby="about-heading">
-  <div class="text">
-    <h2 id="about-heading">Who We Are</h2>
-    <p>Building innovative, meaningful web experiences with a passion for design and technology.</p>
-    <p>Committed to quality, creativity, and your satisfaction every step of the way.</p>
-  </div>
-
-  <div class="images" aria-label="Showcase images">
-    <img src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Professional team working together" />
-    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern office environment" />
-    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Business meeting discussion" />
-    <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Working on laptop with coffee" />
-  </div>
-</section>
-
-  <div class="section-cta">
-    <button class="btn-primary" onclick="location.href='#cta'">Book A Session Now!</button>
-  </div>
-
-<!-- Services (removed outer .container class as requested) -->
-<section id="services" class="services-section" aria-labelledby="services-heading">
-  <!-- removed outer .container to avoid container styling outside content -->
-  <div> <!-- internal wrapper without container class -->
-    <div class="container"> <!-- internal container kept for consistent max-width but NOT applied as outer wrapper for page layout -->
-    <h2 id="services-heading">Our Services</h2>
-    <p class="lead">Business & Management Consultancy – Book a Zoom session now!</p>
-
-    <div class="services-marquee" id="servicesMarquee" tabindex="0" aria-label="Services. Use left and right to explore. Click a card to expand.">
-      <div class="marquee-track" id="marqueeTrack">
-        <!-- service items (unchanged content) -->
-        <div class="service-item" data-index="0" role="button" aria-pressed="false">
-          <div class="service-icon" aria-hidden="true">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="7" width="20" height="12" rx="2" fill="url(#g1)"/>
-              <path d="M7 7V4h10v3" stroke="rgba(1,10,34,0.08)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-              <defs>
-                <linearGradient id="g1" x1="0" x2="1">
-                  <stop offset="0" stop-color="rgba(64,207,255,0.12)"/>
-                  <stop offset="1" stop-color="rgba(0,192,255,0.04)"/>
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <div class="service-info">
-            <h3>Sales</h3>
-            <div class="subline">Drive revenue with modern sales processes</div>
-            <p>Design and implement high-converting sales funnels, training, CRM setup and KPI dashboards tailored to your market and team.</p>
-          </div>
-        </div>
-
-        <div class="service-item" data-index="1" role="button" aria-pressed="false">
-          <div class="service-icon" aria-hidden="true">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="8" r="3" fill="url(#g2)"/>
-              <path d="M5 20c1.5-6 6-8 7-8s5.5 2 7 8" stroke="rgba(1,10,34,0.08)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-              <defs><linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="rgba(64,207,255,0.16)"/><stop offset="1" stop-color="rgba(0,192,255,0.06)"/></linearGradient></defs>
-            </svg>
-          </div>
-          <div class="service-info">
-            <h3>Business Development</h3>
-            <div class="subline">Partnerships, strategy & expansion</div>
-            <p>Identify new channels, create partnership strategies and build go-to-market plans that accelerate growth.</p>
-          </div>
-        </div>
-
-        <div class="service-item" data-index="2" role="button" aria-pressed="false">
-          <div class="service-icon" aria-hidden="true">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <rect x="3" y="4" width="18" height="16" rx="2" fill="url(#g3)"/>
-              <path d="M8 10h8M8 14h8" stroke="rgba(1,10,34,0.12)" stroke-width="1.2" stroke-linecap="round"/>
-              <defs><linearGradient id="g3" x1="0" x2="1"><stop offset="0" stop-color="rgba(64,207,255,0.12)"/><stop offset="1" stop-color="rgba(0,192,255,0.04)"/></linearGradient></defs>
-            </svg>
-          </div>
-          <div class="service-info">
-            <h3>Finance & Accounts</h3>
-            <div class="subline">Accurate accounting & financial control</div>
-            <p>From bookkeeping to CFO advisory, we create robust finance processes, budgeting, expense control and financial modelling for funding readiness.</p>
-          </div>
-        </div>
-
-        <div class="service-item" data-index="3" role="button" aria-pressed="false">
-          <div class="service-icon" aria-hidden="true">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 6h18M6 6v12" stroke="rgba(1,10,34,0.06)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-              <rect x="8" y="9" width="10" height="6" rx="1" fill="url(#g4)"/>
-              <defs><linearGradient id="g4" x1="0" x2="1"><stop offset="0" stop-color="rgba(64,207,255,0.14)"/><stop offset="1" stop-color="rgba(0,192,255,0.05)"/></linearGradient></defs>
-            </svg>
-          </div>
-          <div class="service-info">
-            <h3>MIS & Dashboards</h3>
-            <div class="subline">Data-driven decision making</div>
-            <p>We build MIS, reporting pipelines and dashboards that deliver timely insights for leadership and operations teams.</p>
-          </div>
-        </div>
-
-        <div class="service-item" data-index="4" role="button" aria-pressed="false">
-          <div class="service-icon" aria-hidden="true">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 3l8 5v2H4V8l8-5z" fill="url(#g5)"/>
-              <path d="M5 12h14v6a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-6z" stroke="rgba(1,10,34,0.06)" stroke-width="1.2"/>
-              <defs><linearGradient id="g5" x1="0" x2="1"><stop offset="0" stop-color="rgba(64,207,255,0.12)"/><stop offset="1" stop-color="rgba(0,192,255,0.04)"/></linearGradient></defs>
-            </svg>
-          </div>
-          <div class="service-info">
-            <h3>Banking & Loans</h3>
-            <div class="subline">Funding advisory & relationships</div>
-            <p>Assistance with term loans, working capital, banking relationships and preparing documents for financial institutions.</p>
-          </div>
-        </div>
-
-        <div class="service-item" data-index="5" role="button" aria-pressed="false">
-          <div class="service-icon" aria-hidden="true">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 17l6-6 4 4 8-8" stroke="rgba(0,192,255,0.9)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-            </svg>
-          </div>
-          <div class="service-info">
-            <h3>Growth Strategy</h3>
-            <div class="subline">Scale your business sustainably</div>
-            <p>Market entry playbooks, pricing, customer acquisition and retention strategies to sustainably grow revenues and margins.</p>
-          </div>
-        </div>
-
-        <div class="service-item" data-index="6" role="button" aria-pressed="false">
-          <div class="service-icon" aria-hidden="true">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <rect x="3" y="5" width="18" height="14" rx="2" stroke="rgba(1,10,34,0.06)" fill="url(#g6)"/>
-              <path d="M8 12h8" stroke="rgba(1,10,34,0.12)" stroke-width="1.2"/>
-              <defs><linearGradient id="g6" x1="0" x2="1"><stop offset="0" stop-color="rgba(64,207,255,0.12)"/><stop offset="1" stop-color="rgba(0,192,255,0.04)"/></linearGradient></defs>
-            </svg>
-          </div>
-          <div class="service-info">
-            <h3>Cashflow Management</h3>
-            <div class="subline">Optimize working capital</div>
-            <p>Cashflow forecasting, inventory & receivables optimization to ensure liquidity and healthy operations even during growth phases.</p>
-          </div>
-        </div>
-
-        <div class="service-item" data-index="7" role="button" aria-pressed="false">
-          <div class="service-icon" aria-hidden="true">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 7h16M8 11v6M16 11v6" stroke="rgba(1,10,34,0.12)" stroke-width="1.4" stroke-linecap="round"/>
-              <rect x="6" y="4" width="12" height="4" rx="1" fill="rgba(64,207,255,0.06)"/>
-            </svg>
-          </div>
-          <div class="service-info">
-            <h3>Collections</h3>
-            <div class="subline">Improve receivable cycles</div>
-            <p>Design AR workflows, credit checks and structured collection processes that reduce DSO and improve cash conversion.</p>
-          </div>
-        </div>
-
-        <div class="service-item" data-index="8" role="button" aria-pressed="false">
-          <div class="service-icon" aria-hidden="true">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 20h18M6 20V10h12v10" stroke="rgba(1,10,34,0.12)" stroke-width="1.2" stroke-linecap="round"/>
-              <path d="M9 7h6" stroke="rgba(64,207,255,0.9)" stroke-width="1.6" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="service-info">
-            <h3>IPO Readiness</h3>
-            <div class="subline">Prepare for public markets</div>
-            <p>Financial controls, compliance, reporting alignment and investor story development to make you IPO-ready when the time is right.</p>
-          </div>
-        </div>
-
-        <div class="service-item" data-index="9" role="button" aria-pressed="false">
-          <div class="service-icon" aria-hidden="true">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="8" r="3" fill="rgba(64,207,255,0.14)"/>
-              <path d="M4 20a8 8 0 0 1 16 0" stroke="rgba(1,10,34,0.06)" stroke-width="1.2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="service-info">
-            <h3>CA / CFO / CEO Advisory</h3>
-            <div class="subline">Experienced leadership & counsel</div>
-            <p>Fractional CFO services, strategic advisory and CA-level oversight to strengthen governance and financial decision-making.</p>
-          </div>
-        </div>
-
-      </div>
+  <!-- Hero Section -->
+  <section id="hero" class="hero" role="banner">
+    <div class="content">
+      <h1 class="heading">Empower Your Digital Presence</h1>
+      <p>Custom tailored solutions designed for your success</p>
+      <button class="btn-primary" onclick="location.href='#cta'">Get Started</button>
     </div>
+  </section>
 
-    <div style="margin-top:16px; text-align:center;">
-      <button class="btn-primary" onclick="location.href='#cta'">Book A Session Now!</button>
+  <!-- About Section -->
+  <section id="about" class="about" aria-labelledby="about-heading">
+    <div class="text">
+      <h2 id="about-heading">Who We Are</h2>
+      <p>Building innovative, meaningful web experiences with a passion for design and technology.</p>
+      <p>Committed to quality, creativity, and your satisfaction every step of the way.</p>
     </div>
+    <div class="images" aria-label="Showcase images">
+      <img src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Professional team working together" />
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern office environment" />
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Business meeting discussion" />
+      <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Working on laptop with coffee" />
+    </div>
+  </section>
 
-  </div>
-</section>
-
-<!-- Remove all extra repeated CTA buttons except one, so removing the following two duplicates -->
-
-<!--
-<div class="section-cta">
-  <button class="btn-primary" onclick="location.href='#cta'">Book A Session Now!</button>
-</div>
--->
-
-<!-- Profile Section -->
-<section id="profile" class="about-section">
+  <!-- Features Section -->
+<section id="about" class="about-section">
   <div class="about-container">
+    <!-- Left Column: Image -->
     <div class="about-image">
       <img src="https://via.placeholder.com/400x400" alt="Person Image">
     </div>
 
+    <!-- Right Column: Info -->
     <div class="about-info">
-      <h2>Sumedh Baghla</h2>
-      <p>Sumedh Baghla is an experienced advisor specializing in business strategy, finance and operational scaling. He partners closely with leadership teams to build robust systems and measurable growth playbooks.</p>
-      <p>Services include fractional CFO advisory, MIS & reporting, fundraising preparation and strategic commercial initiatives.</p>
+      <h2>About Vinashree Meshram</h2>
+      <p>Hello! I am Vinashree Meshram, an MCA student passionate about data analytics and business process optimization. I have worked on projects and internships focused on generating insights and driving business improvements. My goal is to help organizations leverage data to make better decisions and achieve their objectives.</p>
+      <p>With skills in Python, Excel, Power BI, and MySQL, I combine technical expertise with practical business knowledge. I am also comfortable with presentations, communication, and stakeholder management.</p>
     </div>
   </div>
 </section>
 
-<!--
-<div class="section-cta">
-  <button class="btn-primary" onclick="location.href='#cta'">Book A Session Now!</button>
-</div>
--->
+  <!-- Extra Visuals Section -->
+  <section id="extra" class="extra-visuals" aria-labelledby="extra-heading">
+    <h2 id="extra-heading">Inspire. Create. Transform.</h2>
+    <p>Bringing your vision alive through stunning visuals and captivating interactions.</p>
+    <div class="extra-visuals-images" aria-label="Inspirational images">
+      <img src="https://images.unsplash.com/photo-1477768663694-04a8ea8f9f92?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Colorful office interiors" />
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Design team collaboration" />
+      <img src="https://images.unsplash.com/photo-1532074205216-18140b6a0400?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Artistic graphics and tools" />
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Creative meeting" />
+    </div>
+  </section>
 
-<section id="why-us" class="why-us-section">
+  <!-- Call to Action -->
+  <section id="cta" class="call-to-action" role="region" aria-label="Call to action">
+    <h2>Ready to take off with your project?</h2>
+    <button onclick="alert('Thank you for your interest! We will contact you soon.')">Contact Us Now</button>
+  </section>
+
+  <!--extra section again-->
+    /*extra section again*/
+    <section id="why-us" class="why-us-section">
   <div class="why-us-container">
-    <!-- Empty space on the left -->
-    <div class="why-us-empty"></div>
-
-    <!-- Right side content -->
+    <!-- Left Content -->
     <div class="why-us-content">
       <h2>Why Choose Us?</h2>
       <p>Taking the right guidance and consulting services can make a huge difference in growing your business. Our team offers expert advice on sales, finance, cash flow management, and overall business strategy to help your company reach its full potential.</p>
       <p>With professional support from experienced consultants, you can optimize operations, improve decision-making, and achieve sustainable growth. Don’t navigate business challenges alone — leverage our expertise and take your business to the next level.</p>
     </div>
+
+    <!-- Right empty space for design -->
+    <div class="why-us-empty"></div>
   </div>
 </section>
 
 
 
-<!-- Extra Visuals Section -->
-<section id="extra" class="extra-visuals" aria-labelledby="extra-heading">
-  <h2 id="extra-heading">Inspire. Create. Transform.</h2>
-  <p>Bringing your vision alive through stunning visuals and captivating interactions.</p>
 
-  <div class="extra-visuals-images" aria-label="Inspirational images">
-    <img src="https://images.unsplash.com/photo-1477768663694-04a8ea8f9f92?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Colorful office interiors" />
-    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Design team collaboration" />
-    <img src="https://images.unsplash.com/photo-1532074205216-18140b6a0400?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Artistic graphics and tools" />
-    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Creative meeting" />
-    <!-- additional images for variety & better responsiveness -->
-    <img src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Workspace desk" />
-    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Sketching ideas" />
-  </div>
-</section>
 
-<!-- Removed this CTA button's container-cta div to reduce duplication -->
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials" aria-labelledby="testimonials-heading" role="region">
+    <h2 id="testimonials-heading">What Our Clients Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <div class="testimonial-avatar"><img src="https://randomuser.me/api/portraits/women/81.jpg" alt="Client Anna" /></div>
+        <p class="testimonial-text">"Exceptional quality and attention to detail. The website exceeded our expectations!"</p>
+        <div class="testimonial-author">Anna K.</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-avatar"><img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Client John" /></div>
+        <p class="testimonial-text">"Quick and professional work. Highly recommended for any digital projects."</p>
+        <div class="testimonial-author">John M.</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-avatar"><img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client Sara" /></div>
+        <p class="testimonial-text">"The team's creativity and dedication helped boost our business immensely."</p>
+        <div class="testimonial-author">Sara L.</div>
+      </div>
+    </div>
+  </section>
 
-<!-- Call to Action -->
-<section id="cta" class="container" style="padding:40px 20px; text-align:center;">
-  <h2 style="color:var(--accent); margin-bottom:10px;">Ready to get started?</h2>
-  <p style="color:var(--muted); margin-bottom:20px;">Book a session now and let's build something great together.</p>
-  <button class="btn-primary" onclick="location.href='mailto:info@example.com'">Book A Session Now!</button>
-</section>
+  <!-- Footer -->
+  <footer role="contentinfo">
+    &copy; 2024 BlueWave Digital Studio. All rights reserved.
+  </footer>
+<script>
+// Hamburger toggle
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('nav ul');
 
-<!-- Simple Footer -->
-<footer style="padding:20px 0;">
-  <div class="container">
-    <div style="margin-bottom:6px;">Baghla Research and Analytics</div>
-    <div style="font-size:0.9rem; color:var(--text-dark);">© <span id="year"></span> All rights reserved.</div>
-  </div>
-</footer>
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navMenu.classList.toggle('show');
+});
+ 
+/* JS will handle active slide scaling */
 
+</script>
 </body>
 </html>
