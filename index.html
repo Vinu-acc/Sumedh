@@ -290,71 +290,17 @@ nav ul li a:hover {
       position: relative;
     }
 
-  /* Features Section container */
-.features {
-  background-color: var(--navy);
-  color: var(--white);
-  text-align: center;
-  padding: 60px 20px;
-}
-
-/* Heading */
-.features h2 {
-  margin-bottom: 2rem;
-  color: var(--accent);
-}
-
-/* Grid */
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* Feature card */
-.feature-card {
-  background: var(--dark-navy);
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0, 192, 255, 0.3);
-  cursor: default;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeSlideUp 0.8s forwards;
-}
-
-/* Stagger delay for cards */
-.feature-card:nth-child(1) { animation-delay: 0.1s; }
-.feature-card:nth-child(2) { animation-delay: 0.3s; }
-.feature-card:nth-child(3) { animation-delay: 0.5s; }
-.feature-card:nth-child(4) { animation-delay: 0.7s; }
-.feature-card:nth-child(5) { animation-delay: 0.9s; }
-.feature-card:nth-child(6) { animation-delay: 1.1s; }
-
-/* Hover effect */
-.feature-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 40px rgba(0, 192, 255, 0.6);
-}
-
-/* Feature content */
-<style>
-.features {
+  /* Features Section container */.features {
   background: #001f3f;
   color: #fff;
   text-align: center;
   padding: 60px 20px;
-  overflow: hidden;
-  position: relative;
 }
 
 .features h2 {
   font-size: 2.5rem;
-  margin-bottom: 10px;
   color: #00bfff;
+  margin-bottom: 10px;
 }
 
 .features p {
@@ -362,60 +308,59 @@ nav ul li a:hover {
   margin-bottom: 40px;
 }
 
-/* Carousel container */
-.carousel-container {
-  width: 100%;
+/* Page Turner Slider */
+.page-turner-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  gap: 20px;
   overflow: hidden;
+  padding: 40px 0;
   position: relative;
-  height: 220px; /* container height */
 }
 
-.carousel-track {
-  display: flex;
-  gap: 20px;
-  animation: slide 25s linear infinite;
+.slide {
+  flex: 0 0 250px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform-origin: center center;
+  cursor: pointer;
+}
+
+.slide.active {
+  transform: scale(1.3) translateY(-10px);
+  z-index: 10;
 }
 
 .feature-card {
   background: #002a5c;
   border-radius: 20px;
   padding: 20px;
-  min-width: 200px;
-  flex: 0 0 auto;
-  font-size: 1rem;
   text-align: center;
   color: #fff;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-  box-shadow: 0 6px 20px rgba(0, 191, 255, 0.3);
+  box-shadow: 0 6px 20px rgba(0,191,255,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover scale effect */
-.feature-card:hover {
-  transform: scale(1.3) rotate(-2deg);
-  box-shadow: 0 10px 40px rgba(0,191,255,0.6);
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #00bfff;
 }
 
-/* Keyframe sliding animation */
-@keyframes slide {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.feature-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
-/* Random irregular scaling animation */
-.feature-card:nth-child(odd) {
-  animation: pulse 6s infinite alternate ease-in-out;
-}
-.feature-card:nth-child(even) {
-  animation: pulse 8s infinite alternate ease-in-out;
+.feature-text {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #d0d0d0;
 }
 
-@keyframes pulse {
-  0% { transform: scale(1) rotate(0deg); }
-  50% { transform: scale(1.1) rotate(1deg); }
-  100% { transform: scale(0.95) rotate(-1deg); }
-}
-
-/* CTA Button */
+/* CTA */
 .services-cta .btn-primary {
   padding: 14px 28px;
   font-size: 18px;
@@ -425,21 +370,13 @@ nav ul li a:hover {
   cursor: pointer;
   background: #00bfff;
   color: #001f3f;
+  margin-top: 30px;
   transition: all 0.3s ease;
-  box-shadow: 0 6px 24px rgba(0,191,255,0.6);
-  margin-top: 40px;
 }
 .services-cta .btn-primary:hover {
   background: #001f3f;
   color: #00bfff;
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0,191,255,0.6);
-}
-
-/* Responsive */
-@media (max-width:768px){
-  .carousel-container { height: auto; }
-  .feature-card { min-width: 150px; font-size: 0.9rem; }
 }
 
     /* Extra Visuals Section */
@@ -719,31 +656,59 @@ nav ul li a:hover {
   </section>
 
   <!-- Features Section -->
-<section id="features" class="features" aria-labelledby="features-heading">
-  <h2 id="features-heading">Our Features</h2>
+
+<section id="features" class="features">
+  <h2>Our Features</h2>
   <p>Dynamic Business & Management Consultancy Services</p>
 
-  <div class="carousel-container">
-    <div class="carousel-track">
-      <div class="feature-card">🚀 Sales Strategy</div>
-      <div class="feature-card">📈 Business Development</div>
-      <div class="feature-card">💰 Finance & Accounts</div>
-      <div class="feature-card">📊 MIS / Management Systems</div>
-      <div class="feature-card">🏦 Banking & Loans</div>
-      <div class="feature-card">🚀 Business Growth</div>
-      <div class="feature-card">💵 Cashflow & Collections</div>
-      <div class="feature-card">📄 IPO Advisory</div>
-      <div class="feature-card">👨‍💼 CA/CFO/CPO/CEO on Contract</div>
-      <div class="feature-card">📞 Zoom Consultation</div>
+  <div class="page-turner-slider">
+    <div class="slide">
+      <div class="feature-card">
+        <div class="feature-icon">🚀</div>
+        <div class="feature-title">Sales Strategy</div>
+        <div class="feature-text">Optimized sales strategies to boost revenue and growth.</div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="feature-card">
+        <div class="feature-icon">📈</div>
+        <div class="feature-title">Business Development</div>
+        <div class="feature-text">Expand your business with structured development plans.</div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <div class="feature-title">Finance & Accounts</div>
+        <div class="feature-text">Professional finance management and accounting solutions.</div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <div class="feature-title">MIS / Management Systems</div>
+        <div class="feature-text">Integrated management systems for smooth operations.</div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="feature-card">
+        <div class="feature-icon">🏦</div>
+        <div class="feature-title">Banking & Loans</div>
+        <div class="feature-text">Expert guidance on loans, banking, and financing.</div>
+      </div>
     </div>
   </div>
 
+  <!-- CTA -->
   <div class="services-cta">
     <button onclick="location.href='#cta'" class="btn-primary">
       Book Your Session Now! (Punjab, Haryana, Delhi)
     </button>
   </div>
 </section>
+
+<style>
+
 
 
 
@@ -801,6 +766,34 @@ hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
   navMenu.classList.toggle('show');
 });
+ 
+/* JS will handle active slide scaling */
+const slides = document.querySelectorAll('.slide');
+let current = 0;
+
+function setActiveSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    // Slight rotation for neighbors
+    if (i === index) slide.classList.add('active');
+  });
+}
+
+// Auto-slide every 3s
+setActiveSlide(current);
+setInterval(() => {
+  current = (current + 1) % slides.length;
+  setActiveSlide(current);
+}, 3000);
+
+// Optional: click to set active
+slides.forEach((slide, index) => {
+  slide.addEventListener('click', () => {
+    current = index;
+    setActiveSlide(current);
+  });
+});
+
 </script>
 </body>
 </html>
