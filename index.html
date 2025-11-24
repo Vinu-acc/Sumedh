@@ -290,93 +290,131 @@ nav ul li a:hover {
       position: relative;
     }
 
-  /* Features Section container */.features {
-  background: #001f3f;
-  color: #fff;
-  text-align: center;
-  padding: 60px 20px;
+  /* Features Section container */
+/* Section styling */
+.services-section{
+  background:#f5f5f5;
+  color:#001f3f;
+  padding:60px 20px;
+  text-align:center;
 }
 
-.features h2 {
-  font-size: 2.5rem;
-  color: #00bfff;
-  margin-bottom: 10px;
+.services-section h2{
+  font-size:2.5rem;
+  color:var(--navy);
+  margin-bottom:10px;
 }
 
-.features p {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
+.services-section p{
+  font-size:1.2rem;
+  margin-bottom:40px;
 }
 
-/* Page Turner Slider */
-.page-turner-slider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  perspective: 1000px;
-  gap: 20px;
-  overflow: hidden;
-  padding: 40px 0;
-  position: relative;
+/* Container Layout */
+.services-container{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:center;
+  flex-wrap:wrap;
 }
 
-.slide {
-  flex: 0 0 250px;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  transform-origin: center center;
-  cursor: pointer;
+/* Content Cards */
+.service-content{
+  flex:1;
+  min-width:300px;
+  position:relative;
+  height:250px;
 }
 
-.slide.active {
-  transform: scale(1.3) translateY(-10px);
-  z-index: 10;
+.service-card{
+  position:absolute;
+  top:0; left:0; right:0; bottom:0;
+  background:#fff;
+  border-radius:20px;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  transform:translateY(50px);
+  transition: all 0.5s ease;
+  box-shadow:0 6px 20px rgba(0,191,255,0.3);
 }
 
-.feature-card {
-  background: #002a5c;
-  border-radius: 20px;
-  padding: 20px;
-  text-align: center;
-  color: #fff;
-  box-shadow: 0 6px 20px rgba(0,191,255,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.service-card.active{
+  opacity:1;
+  transform:translateY(0);
 }
 
-.feature-icon {
-  font-size: 3rem;
-  margin-bottom: 10px;
-  color: #00bfff;
+/* Icon inside content card */
+.service-icon{
+  width:60px;
+  height:60px;
+  border:2px solid var(--navy);
+  border-radius:12px;
+  margin-bottom:15px;
+  background-size:cover;
+  background-position:center;
 }
 
-.feature-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 5px;
+/* Icon Grid */
+.service-icons{
+  flex:1;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(50px,1fr));
+  gap:15px;
+  justify-items:center;
 }
 
-.feature-text {
-  font-size: 0.95rem;
-  font-weight: 300;
-  color: #d0d0d0;
+.service-icons .icon{
+  width:50px;
+  height:50px;
+  border:2px solid var(--navy);
+  border-radius:12px;
+  cursor:pointer;
+  transition:all 0.3s ease;
+  background-size:cover;
+  background-position:center;
+}
+
+.service-icons .icon:hover{
+  transform:scale(1.2);
+  border-color:var(--accent);
 }
 
 /* CTA */
-.services-cta .btn-primary {
-  padding: 14px 28px;
-  font-size: 18px;
-  font-weight: 700;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  background: #00bfff;
-  color: #001f3f;
-  margin-top: 30px;
-  transition: all 0.3s ease;
+.services-cta .btn-primary{
+  padding:14px 28px;
+  font-size:18px;
+  font-weight:700;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+  background:var(--navy);
+  color:var(--white);
+  margin-top:40px;
+  transition:all 0.3s ease;
 }
-.services-cta .btn-primary:hover {
-  background: #001f3f;
-  color: #00bfff;
-  transform: translateY(-3px);
+.services-cta .btn-primary:hover{
+  background:var(--accent);
+  color:var(--navy);
+  transform:translateY(-3px);
+}
+
+/* Responsive Layout */
+@media(max-width:768px){
+  .services-container{
+    flex-direction:column;
+  }
+  .service-icons{
+    grid-template-columns:repeat(5,1fr);
+    margin-bottom:20px;
+  }
+  .service-content{
+    height:200px;
+  }
 }
 
     /* Extra Visuals Section */
@@ -656,50 +694,50 @@ nav ul li a:hover {
   </section>
 
   <!-- Features Section -->
+<section id="services" class="services-section">
+  <h2>Our Services</h2>
+  <p>Expert Business & Management Consultancy Services</p>
 
-<section id="features" class="features">
-  <h2>Our Features</h2>
-  <p>Dynamic Business & Management Consultancy Services</p>
+  <div class="services-container">
+    <!-- Content Display -->
+    <div class="service-content">
+      <div class="service-card active">
+        <div class="service-icon" style="background-image:url('icon-sales.png');"></div>
+        <h3>Sales Strategy</h3>
+        <p>Optimized sales strategies to boost revenue and growth.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background-image:url('icon-business.png');"></div>
+        <h3>Business Development</h3>
+        <p>Expand your business with structured development plans.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background-image:url('icon-finance.png');"></div>
+        <h3>Finance & Accounts</h3>
+        <p>Professional finance management and accounting solutions.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background-image:url('icon-mis.png');"></div>
+        <h3>MIS / Management Systems</h3>
+        <p>Integrated management systems for smooth operations.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background-image:url('icon-banking.png');"></div>
+        <h3>Banking & Loans</h3>
+        <p>Expert guidance on loans, banking, and financing.</p>
+      </div>
+    </div>
 
-  <div class="page-turner-slider">
-    <div class="slide">
-      <div class="feature-card">
-        <div class="feature-icon">🚀</div>
-        <div class="feature-title">Sales Strategy</div>
-        <div class="feature-text">Optimized sales strategies to boost revenue and growth.</div>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="feature-card">
-        <div class="feature-icon">📈</div>
-        <div class="feature-title">Business Development</div>
-        <div class="feature-text">Expand your business with structured development plans.</div>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="feature-card">
-        <div class="feature-icon">💰</div>
-        <div class="feature-title">Finance & Accounts</div>
-        <div class="feature-text">Professional finance management and accounting solutions.</div>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="feature-card">
-        <div class="feature-icon">📊</div>
-        <div class="feature-title">MIS / Management Systems</div>
-        <div class="feature-text">Integrated management systems for smooth operations.</div>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="feature-card">
-        <div class="feature-icon">🏦</div>
-        <div class="feature-title">Banking & Loans</div>
-        <div class="feature-text">Expert guidance on loans, banking, and financing.</div>
-      </div>
+    <!-- Icon Grid -->
+    <div class="service-icons">
+      <div class="icon" data-index="0"></div>
+      <div class="icon" data-index="1"></div>
+      <div class="icon" data-index="2"></div>
+      <div class="icon" data-index="3"></div>
+      <div class="icon" data-index="4"></div>
     </div>
   </div>
 
-  <!-- CTA -->
   <div class="services-cta">
     <button onclick="location.href='#cta'" class="btn-primary">
       Book Your Session Now! (Punjab, Haryana, Delhi)
@@ -707,7 +745,10 @@ nav ul li a:hover {
   </div>
 </section>
 
-<style>
+
+
+
+
 
 
 
@@ -768,29 +809,40 @@ hamburger.addEventListener('click', () => {
 });
  
 /* JS will handle active slide scaling */
-const slides = document.querySelectorAll('.slide');
-let current = 0;
 
-function setActiveSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove('active');
-    // Slight rotation for neighbors
-    if (i === index) slide.classList.add('active');
-  });
+const cards=document.querySelectorAll('.service-card');
+const icons=document.querySelectorAll('.service-icons .icon');
+let current=0;
+let interval;
+
+// function to activate card
+function showCard(index){
+  cards.forEach(c=>c.classList.remove('active'));
+  cards[index].classList.add('active');
 }
 
-// Auto-slide every 3s
-setActiveSlide(current);
-setInterval(() => {
-  current = (current + 1) % slides.length;
-  setActiveSlide(current);
-}, 3000);
+// automatic slider
+function startSlider(){
+  interval=setInterval(()=>{
+    current=(current+1)%cards.length;
+    showCard(current);
+  },3000);
+}
 
-// Optional: click to set active
-slides.forEach((slide, index) => {
-  slide.addEventListener('click', () => {
-    current = index;
-    setActiveSlide(current);
+// stop slider
+function stopSlider(){
+  clearInterval(interval);
+}
+
+// start automatic slider
+startSlider();
+
+// handle icon clicks
+icons.forEach(icon=>{
+  icon.addEventListener('click',()=>{
+    stopSlider();
+    current=parseInt(icon.dataset.index);
+    showCard(current);
   });
 });
 
