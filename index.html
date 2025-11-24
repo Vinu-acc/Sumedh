@@ -291,46 +291,45 @@ nav ul li a:hover {
     }
 
   /* Features Section container */
-/* Section styling */
-.services-section{
-  background:#f5f5f5;
-  color:#001f3f;
+/* Section Styling */
+.services-section {
   padding:60px 20px;
   text-align:center;
 }
 
-.services-section h2{
+.services-section h2 {
   font-size:2.5rem;
-  color:var(--navy);
+  color:var(--accent);
   margin-bottom:10px;
 }
 
-.services-section p{
+.services-section p {
   font-size:1.2rem;
   margin-bottom:40px;
+  color:var(--text-dark);
 }
 
 /* Container Layout */
-.services-container{
+.services-container {
   display:flex;
   justify-content:space-between;
   gap:20px;
-  align-items:center;
+  align-items:flex-start;
   flex-wrap:wrap;
 }
 
 /* Content Cards */
-.service-content{
+.service-content {
   flex:1;
   min-width:300px;
   position:relative;
-  height:250px;
+  height:280px;
 }
 
-.service-card{
+.service-card {
   position:absolute;
   top:0; left:0; right:0; bottom:0;
-  background:#fff;
+  background:var(--dark-navy);
   border-radius:20px;
   padding:20px;
   display:flex;
@@ -339,20 +338,20 @@ nav ul li a:hover {
   justify-content:center;
   opacity:0;
   transform:translateY(50px);
-  transition: all 0.5s ease;
-  box-shadow:0 6px 20px rgba(0,191,255,0.3);
+  transition: all 0.8s ease-out;
+  box-shadow:0 6px 20px rgba(0,192,255,0.3);
 }
 
-.service-card.active{
+.service-card.active {
   opacity:1;
   transform:translateY(0);
 }
 
 /* Icon inside content card */
-.service-icon{
+.service-icon {
   width:60px;
   height:60px;
-  border:2px solid var(--navy);
+  border:2px solid var(--accent);
   border-radius:12px;
   margin-bottom:15px;
   background-size:cover;
@@ -360,60 +359,61 @@ nav ul li a:hover {
 }
 
 /* Icon Grid */
-.service-icons{
+.service-icons {
   flex:1;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(50px,1fr));
   gap:15px;
   justify-items:center;
+  align-items:center;
 }
 
-.service-icons .icon{
+.service-icons .icon {
   width:50px;
   height:50px;
-  border:2px solid var(--navy);
+  border:2px solid var(--accent);
   border-radius:12px;
   cursor:pointer;
-  transition:all 0.3s ease;
+  transition:all 0.4s ease-out;
   background-size:cover;
   background-position:center;
 }
 
-.service-icons .icon:hover{
-  transform:scale(1.2);
-  border-color:var(--accent);
+.service-icons .icon:hover {
+  transform:scale(1.3);
+  border-color:var(--accent-light);
 }
 
-/* CTA */
-.services-cta .btn-primary{
+/* CTA Button */
+.services-cta .btn-primary {
   padding:14px 28px;
   font-size:18px;
   font-weight:700;
   border:none;
   border-radius:30px;
   cursor:pointer;
-  background:var(--navy);
-  color:var(--white);
+  background:var(--accent);
+  color:var(--navy);
   margin-top:40px;
   transition:all 0.3s ease;
 }
-.services-cta .btn-primary:hover{
-  background:var(--accent);
+.services-cta .btn-primary:hover {
+  background:var(--accent-light);
   color:var(--navy);
   transform:translateY(-3px);
 }
 
 /* Responsive Layout */
 @media(max-width:768px){
-  .services-container{
+  .services-container {
     flex-direction:column;
   }
-  .service-icons{
+  .service-icons {
     grid-template-columns:repeat(5,1fr);
     margin-bottom:20px;
   }
   .service-content{
-    height:200px;
+    height:220px;
   }
 }
 
@@ -730,11 +730,11 @@ nav ul li a:hover {
 
     <!-- Icon Grid -->
     <div class="service-icons">
-      <div class="icon" data-index="0"></div>
-      <div class="icon" data-index="1"></div>
-      <div class="icon" data-index="2"></div>
-      <div class="icon" data-index="3"></div>
-      <div class="icon" data-index="4"></div>
+      <div class="icon" data-index="0" style="background-image:url('icon-sales.png');"></div>
+      <div class="icon" data-index="1" style="background-image:url('icon-business.png');"></div>
+      <div class="icon" data-index="2" style="background-image:url('icon-finance.png');"></div>
+      <div class="icon" data-index="3" style="background-image:url('icon-mis.png');"></div>
+      <div class="icon" data-index="4" style="background-image:url('icon-banking.png');"></div>
     </div>
   </div>
 
