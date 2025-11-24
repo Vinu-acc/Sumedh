@@ -436,6 +436,68 @@ nav ul li a:hover {
       color: var(--white);
     }
 
+    /*extra section again*/
+    
+.why-us-section {
+  padding: 60px 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-us-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Left side content */
+.why-us-content {
+  flex: 2; /* wider side */
+  min-width: 300px;
+  animation: fadeSlideIn 1s ease forwards;
+}
+
+.why-us-content h2 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.why-us-content p {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+/* Right side empty space (can be used for visuals later) */
+.why-us-empty {
+  flex: 1; /* narrower side */
+  min-width: 150px;
+}
+
+/* Fade in from bottom animation */
+@keyframes fadeSlideIn {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive: stack content on small screens */
+@media(max-width:768px){
+  .why-us-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .why-us-content {
+    width: 100%;
+  }
+  .why-us-empty {
+    display: none;
+  }
+}
+
     /* Testimonials */
     .testimonials {
       background-color: var(--dark-navy);
@@ -672,6 +734,24 @@ nav ul li a:hover {
     <h2>Ready to take off with your project?</h2>
     <button onclick="alert('Thank you for your interest! We will contact you soon.')">Contact Us Now</button>
   </section>
+
+  <!--extra section again-->
+  <section id="why-us" class="why-us-section">
+  <div class="why-us-container">
+    <!-- Left Content -->
+    <div class="why-us-content">
+      <h2>Why Choose Us?</h2>
+      <p>Taking the right guidance and consulting services can make a huge difference in growing your business. Our team offers expert advice on sales, finance, cash flow management, and overall business strategy to help your company reach its full potential.</p>
+      <p>With professional support from experienced consultants, you can optimize operations, improve decision-making, and achieve sustainable growth. Don’t navigate business challenges alone — leverage our expertise and take your business to the next level.</p>
+    </div>
+
+    <!-- Right empty space for design -->
+    <div class="why-us-empty"></div>
+  </div>
+</section>
+
+
+
 
   <!-- Testimonials -->
   <section id="testimonials" class="testimonials" aria-labelledby="testimonials-heading" role="region">
