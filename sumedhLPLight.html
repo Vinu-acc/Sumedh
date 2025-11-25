@@ -139,7 +139,7 @@ nav ul li a:hover {
     top: 100%;
     right: 0;
     background: var(--dark-navy);
-    width: 200px;
+    width: 100%;
     flex-direction: column;
     padding: 1rem;
     gap: 1rem;
@@ -198,7 +198,6 @@ nav ul li a:hover {
 }
     /* Hero */
 
-    /* HERO SECTION */
     .hero-section {
       width: 100%;
       padding: 4rem 2rem;
@@ -226,7 +225,7 @@ nav ul li a:hover {
 
     .hero-left h1 {
       font-family: 'Merriweather', serif;
-      font-size: clamp(1.9rem, 4vw, 2.8rem); /* Responsive scaling */
+      font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 700;
       line-height: 1.3;
       margin-bottom: 1rem;
@@ -234,9 +233,9 @@ nav ul li a:hover {
     }
 
     .hero-left p {
-      font-size: clamp(1rem, 2vw, 1.15rem);
+      font-size: clamp(1rem, 2vw, 1.25rem);
       margin-bottom: 1.8rem;
-      max-width: 450px;
+      max-width: 480px;
       font-weight: 300;
       color: #e3e7ef;
     }
@@ -270,37 +269,48 @@ nav ul li a:hover {
 
     .form-box {
       width: 100%;
-      height: auto;
       max-width: 480px;
       background: rgba(255,255,255,0.12);
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(10px);
       padding: 1rem;
       border-radius: 12px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      overflow: hidden;
     }
 
+    /* FIXED — PROPER HEIGHT + SCROLL ENABLED */
     .form-box iframe {
       width: 100%;
- 
+      min-height: 820px;   /* Large enough for desktop */
       border: none;
       border-radius: 8px;
+      overflow-y: auto;
+      scrolling: auto;
     }
 
-    /* RESPONSIVE */
+    /* MOBILE FIX — MORE HEIGHT */
     @media (max-width: 900px) {
       .hero-inner {
         flex-direction: column;
         text-align: center;
       }
 
-      .hero-left,
-      .hero-right {
+      .hero-left, .hero-right {
         max-width: 100%;
       }
 
-      .form-box {
-        width: 100%;
-        height:auto;
+      .form-box iframe {
+        min-height: 1000px;  /* Prevents bottom cutting */
+      }
+    }
+
+    @media (max-width: 500px) {
+      .hero-section {
+        padding: 3rem 1.2rem;
+      }
+
+      .form-box iframe {
+        min-height: 1150px; /* Extra safe for very small screens */
       }
     }
     /* About Section with sticky text and scrolling images */
@@ -431,7 +441,7 @@ nav ul li a:hover {
 }
     /* Extra Visuals Section */
     .extra-visuals {
-      margin: 5rem 1.5rem;
+      margin: 2rem 1.5rem;
       background:var(--white));
       border-radius: 20px;
       color: var(--dark-navy);
@@ -580,6 +590,7 @@ nav ul li a:hover {
 
 /* Right side content */
 .why-us-content {
+  margin-left:20px;
   flex: 2; /* 2/3 width */
   width: 75%;
   color: var(--dark-navy); /* black text */
@@ -666,7 +677,7 @@ nav ul li a:hover {
     footer {
       background-color: var(--dark-navy);
       padding: 1.5rem 1.5rem;
-      color: var(--dark-navy);
+      color: var(--white);
       text-align: center;
       font-size: 0.9rem;
       border-top: 1px solid var(--accent-light);
@@ -899,6 +910,7 @@ nav ul li a:hover {
 
   <!-- Hero Section -->
 
+
 <section id="hero" class="hero-section">
   <div class="hero-inner">
 
@@ -921,13 +933,14 @@ nav ul li a:hover {
         <iframe 
           src="https://ns.myprofunnels.com/widget/form/Ng7ytHKZqDU3BySgCZay"
           frameborder="0"
-          scrolling="no">
+          scrolling="yes">
         </iframe>
       </div>
     </div>
 
   </div>
 </section>
+
 
   <!-- About Section -->
   <section id="about" class="about" aria-labelledby="about-heading">
@@ -970,7 +983,7 @@ nav ul li a:hover {
       <article class="service-card" role="button" tabindex="0" aria-pressed="false" data-index="1">
         <div class="service-icon" aria-hidden="true">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="8" r="3" fill="#40cfff22"/>
+            <circle cx="12" cy="8" r="3" fill="#01245a"/>
             <path d="M5 20c1.5-6 6-8 7-8s5.5 2 7 8" stroke="#01245a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
@@ -984,7 +997,7 @@ nav ul li a:hover {
       <article class="service-card" role="button" tabindex="0" aria-pressed="false" data-index="2">
         <div class="service-icon" aria-hidden="true">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-            <rect x="3" y="4" width="18" height="16" rx="2" fill="#40cfff22"/>
+            <rect x="3" y="4" width="18" height="16" rx="2" fill="#01245a"/>
             <path d="M8 10h8M8 14h8" stroke="#01245a" stroke-width="1.2" stroke-linecap="round"/>
           </svg>
         </div>
@@ -999,7 +1012,7 @@ nav ul li a:hover {
         <div class="service-icon" aria-hidden="true">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
             <path d="M3 6h18M6 6v12" stroke="#01245a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-            <rect x="8" y="9" width="10" height="6" rx="1" fill="#40cfff22"/>
+            <rect x="8" y="9" width="10" height="6" rx="1" fill="#01245a"/>
           </svg>
         </div>
         <div class="service-info">
@@ -1012,7 +1025,7 @@ nav ul li a:hover {
       <article class="service-card" role="button" tabindex="0" aria-pressed="false" data-index="4">
         <div class="service-icon" aria-hidden="true">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 3l8 5v2H4V8l8-5z" fill="#40cfff22"/>
+            <path d="M12 3l8 5v2H4V8l8-5z" fill="#01245a"/>
             <path d="M5 12h14v6a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-6z" stroke="#01245a" stroke-width="1.2"/>
           </svg>
         </div>
