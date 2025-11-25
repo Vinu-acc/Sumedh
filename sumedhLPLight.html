@@ -130,7 +130,7 @@ nav ul li a:hover {
   display: block;
   width: 25px;
   height: 3px;
-  background: var( --sky-blue);
+  background: var( --text-light);
   border-radius: 3px;
   transition: all 0.3s ease;
 }
@@ -157,12 +157,7 @@ nav ul li a:hover {
   .hamburger {
     display: flex;
   }
-  .hero h1 {
-    font-size:4.6rem;
-  }
-    .hero h1 {
-      font-size: 5rem;
-    }
+
 }
 
 /* Hamburger animation when active */
@@ -204,125 +199,68 @@ nav ul li a:hover {
       background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center center fixed no-repeat;
       background-size: cover;
       min-height: 85vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      color: var(--white);
-      padding: 0 1.5rem;
-      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.85);
-      position: relative;
-      z-index: 1;
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(2, 18, 45, 0.7);
-      z-index: -1;
-      border-radius: 0;
-    }
-    .hero .content {
-      max-width: 600px;
-      animation: fadeSlideIn 1.5s ease forwards;
-      opacity: 0;
-      transform: translateX(-50px);
-      color: var(--white);
-      position: sticky;
-      top: 20vh;
-    }
-    
-.merriweather-heading {
-  font-family: "Merriweather", serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
-    .hero h1 {
-      font-size: 4.2rem;
-      margin-bottom: 1rem;
-      line-height: 1.1;
-    }
-    .hero p {
-      font-size: 1.3rem;
-      font-weight: 400;
-      margin-bottom: 2rem;
-      color: var(--accent-light);
-    }
-    .hero .btn-primary {
-      padding: 1rem 2rem;
-      background: var(--accent);
-      color: var(--navy);
-      font-weight: 700;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-      box-shadow: 0 6px 24px rgba(0, 192, 255, 0.6);
-    }
-    .hero .btn-primary:hover {
-      background: var(--accent-light);
-    }
-    /* 2-column layout wrapper */
-.hero-wrapper {
-  display: flex;
   width: 100%;
-  height: 100%;
+  padding: 4rem 2rem; /* Add spacing inside hero */
+  box-sizing: border-box;
 }
 
-/* LEFT COLUMN (already exists) */
+/* Left Column */
 .hero .content {
   flex: 1;
-  max-width: 50%;
+  max-width: 550px;
 }
 
-/* Wrap hero content + form in two columns for large screens */
-
-
-/* Right column */
-/* New wrapper for two-column layout */
+/* Two-column wrapper */
 .hero-inner {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
-}
-
-/* Right column */
-.hero-form-container {
-  width: 50%;
-  padding: 1rem 0;
-  display: flex;
   justify-content: center;
   align-items: flex-start;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the whole block */
+  padding: 0 1rem;
 }
 
-/* Form auto-height */
+/* Right column container */
+.hero-form-container {
+  flex: 1;
+  max-width: 480px;  /* Prevent too large width */
+  padding: 1rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+}
+
+/* Form styling */
 .hero-form {
   width: 100%;
-  min-height: 550px;
+  min-height: 620px;   /* stable height */
   border: none;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-/* Mobile view: stack */
+/* Mobile View */
 @media(max-width: 900px) {
   .hero-inner {
     flex-direction: column;
+    gap: 2rem;
+  }
+
+  .hero .content {
+    max-width: 100%;
   }
 
   .hero-form-container {
-    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    background: transparent;
   }
 
   .hero-form {
-    min-height: 600px;
+    min-height: 650px;
   }
 }
-
 
 
     /* About Section with sticky text and scrolling images */
@@ -908,17 +846,19 @@ nav ul li a:hover {
     </li>
   </ul>
 </nav>
-
-  <!-- Hero Section -->
+<!--hero-->
 <section id="hero" class="hero" role="banner">
 
   <div class="hero-inner">
+
+    <!-- LEFT CONTENT -->
     <div class="content">
       <h1 class="heading">Empower Your Digital Presence</h1>
       <p>Custom tailored solutions designed for your success</p>
       <button class="btn-primary" onclick="location.href='#cta'">Get Started</button>
     </div>
 
+    <!-- RIGHT FORM -->
     <div class="hero-form-container">
       <iframe
         src="https://ns.myprofunnels.com/widget/form/Ng7ytHKZqDU3BySgCZay"
@@ -927,9 +867,11 @@ nav ul li a:hover {
         scrolling="no">
       </iframe>
     </div>
+
   </div>
 
 </section>
+
 
 
 
