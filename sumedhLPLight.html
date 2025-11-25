@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stunning Deep Navy Blue Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Updated Color palette */
+ :root {
+  --navy: #ffffff;                /* MAIN BACKGROUND – now pure white */
+  --dark-navy: #f4f6fa;           /* Soft light grey-blue for sections */
+  --accent: #003f88;              /* Rich Royal Blue accent (professional) */
+  --accent-light: #2a6fdb;        /* Light royal blue */
+  --text-light: #0a1a33;          /* Main dark text for visibility */
+  --text-dark: #4a5b78;           /* Secondary text */
+  --white: #ffffff;               /* White stays white */
+}
+
+
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--navy);
+      color: var(--text-light);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1, h2, h3 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      color: var(--white);
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      color: var(--text-light);
+      font-weight: 300;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+    }
+
+    /* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--dark-navy);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+nav .brand {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav ul li {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--accent-light);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: var(--white);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--dark-navy);
+    width: 200px;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    display: none;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  .hero h1 {
+    font-size:4.6rem;
+  }
+    .hero h1 {
+      font-size: 5rem;
+    }
+}
+
+/* Hamburger animation when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+    .logo-container {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo image */
+.logo-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* optional rounded corners */
+  object-fit: contain;
+}
+
+/* Company name below logo */
+.logo-text {
+  font-size: 0.8rem;
+  color: #ffffff; /* white text */
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+    /* Hero */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center center fixed no-repeat;
+      background-size: cover;
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      color: var(--white);
+      padding: 0 1.5rem;
+      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.85);
+      position: relative;
+      z-index: 1;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(2, 18, 45, 0.7);
+      z-index: -1;
+      border-radius: 0;
+    }
+    .hero .content {
+      max-width: 600px;
+      animation: fadeSlideIn 1.5s ease forwards;
+      opacity: 0;
+      transform: translateX(-50px);
+      color: var(--white);
+      position: sticky;
+      top: 20vh;
+    }
+    
+.merriweather-heading {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+    .hero h1 {
+      font-size: 4.2rem;
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      color: var(--accent-light);
+    }
+    .hero .btn-primary {
+      padding: 1rem 2rem;
+      background: var(--accent);
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 6px 24px rgba(0, 192, 255, 0.6);
+    }
+    .hero .btn-primary:hover {
+      background: var(--accent-light);
+    }
+
+    /* About Section with sticky text and scrolling images */
+    .about {
+      background-color: var(--dark-navy);
+      padding: 4rem 1.5rem;
+      display: flex;
+      gap: 3rem;
+      color: var(--white);
+    }
+    .about .text {
+      flex: 1;
+      position: sticky;
+      top: 20vh;
+      height: max-content;
+      padding-right: 1.5rem;
+    }
+    .about .text h2 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .about .text p {
+      font-size: 1.1rem;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+    .about .images {
+      flex: 2;
+      position: relative;
+      width: 100%;
+      height: 400px; /* fixed height for slider */
+      padding-left: 1rem;
+      border-left: 1px solid var(--accent);
+      overflow: hidden;
+      display: block;
+    }
+    .about .images img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 192, 255, 0.5);
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .about .images img.active {
+      opacity: 1;
+      position: relative;
+    }
+
+  /* Features Section container */
+    
+
+.about-section {
+  padding: 60px 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Image with rounded corners and subtle white shadow */
+.about-image {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  animation: fadeSlideIn 1s ease forwards;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+  object-fit: cover;
+}
+
+.about-info {
+  flex: 2;
+  min-width: 280px;
+  animation: fadeSlideIn 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.about-info h2 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.about-info p {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 15px;
+}
+
+/* Fade in from bottom animation */
+@keyframes fadeSlideIn {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width:768px){
+  .about-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .about-image {
+    max-width: 80%;
+  }
+  .about-info {
+    width: 90%;
+    text-align: center;
+  }
+}
+    /* Extra Visuals Section */
+    .extra-visuals {
+      margin: 5rem 1.5rem;
+      background: linear-gradient(135deg, var(--dark-navy), var(--navy));
+      border-radius: 20px;
+      color: var(--white);
+      text-align: center;
+      padding: 3rem 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .extra-visuals h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--accent-light);
+    }
+    .extra-visuals p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+      color: var(--accent);
+    }
+    .extra-visuals-images {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .extra-visuals-images img {
+      flex: 1 1 180px;
+      max-width: 220px;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0, 192, 255, 0.4);
+      transition: transform 0.35s ease;
+      cursor: pointer;
+    }
+    .extra-visuals-images img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 40px rgba(0, 192, 255, 0.75);
+    }
+
+    /* Call to Action */
+    .call-to-action {
+      background-color: #ffffff;
+      color: var(--navy);
+      padding: 3rem 1.5rem;
+      text-align: center;
+      border-radius: 20px;
+      margin: 4rem 1.5rem 6rem 1.5rem;
+      box-shadow: 0 8px 20px rgba(0, 192, 255, 0.7);
+      animation: pulse 3s infinite ease-in-out;
+    }
+    .call-to-action h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color:  var(--navy);
+    }
+    .call-to-action button {
+      background-color: var(--navy);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.2rem;
+      padding: 1rem 3rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .call-to-action button:hover {
+      background-color: var(--accent-light);
+      color: var(--white);
+    }
+
+/*why choose us*/
+.why-us-section {
+  padding: 60px 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  border-radius: 30px;
+  background-image: url('https://img.freepik.com/premium-vector/navy-chrome-white-luxury-sharp-background_78370-726.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.why-us-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end; /* push content to right */
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Empty space on the left */
+.why-us-empty {
+  flex: 1; /* 1/3 width */
+  min-width: 150px;
+}
+
+/* Right side content */
+.why-us-content {
+  flex: 2; /* 2/3 width */
+  min-width: 300px;
+  max-width: 66%;
+  color: #000000; /* black text */
+  text-align: right; /* align text to right */
+  animation: fadeSlideIn 1s ease forwards;
+}
+
+/* Headings and text */
+.why-us-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color:#000000;
+}
+
+.why-us-content p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.8;
+  color:#000000;
+}
+
+/* Fade in from bottom animation */
+@keyframes fadeSlideIn {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive for small screens */
+@media(max-width:768px){
+  .why-us-container {
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+  }
+  .why-us-empty {
+    display: none;
+  }
+  .why-us-content {
+    width: 100%;
+    max-width: 100%;
+    text-align: right;
+  }
+  .why-us-empty {
+  flex: 1; /* 1/3 width */
+  
+}
+
+/* Right side content */
+.why-us-content {
+  flex: 2; /* 2/3 width */
+  color: #000000; /* black text */
+  text-align: right; /* align text to right */
+  animation: fadeSlideIn 1s ease forwards;
+}
+}
+
+
+    /* Testimonials */
+    .testimonials {
+      background-color: var(--dark-navy);
+      padding: 4rem 1.5rem;
+      color: var(--text-light);
+      text-align: center;
+      max-width: 1100px;
+      margin: 0 auto 4rem auto;
+      border-radius: 20px;
+      box-shadow: 0 6px 24px rgba(0, 192, 255, 0.5);
+    }
+    .testimonials h2 {
+      margin-bottom: 2.5rem;
+      color: var(--accent);
+    }
+    .testimonial-cards {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .testimonial-card {
+      background-color: var(--navy);
+      border-radius: 20px;
+      padding: 2rem;
+      width: 300px;
+      box-shadow: 0 4px 15px rgba(0, 192, 255, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeSlideUp 1s ease forwards;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: box-shadow 0.3s ease;
+      cursor: default;
+    }
+    .testimonial-card:hover {
+      box-shadow: 0 10px 40px rgba(0, 192, 255, 0.9);
+    }
+    .testimonial-avatar {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--accent);
+      margin-bottom: 1rem;
+    }
+    .testimonial-avatar img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    .testimonial-text {
+      font-style: italic;
+      color: var(--text-light);
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .testimonial-author {
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--dark-navy);
+      padding: 1.5rem 1.5rem;
+      color: var(--text-dark);
+      text-align: center;
+      font-size: 0.9rem;
+      border-top: 1px solid var(--accent-light);
+      user-select: none;
+    }
+
+    /* Animations */
+    @keyframes fadeSlideIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes fadeSlideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 8px 20px rgba(0, 192, 255, 0.7);
+      }
+      50% {
+        box-shadow: 0 8px 42px rgba(0, 192, 255, 1);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
+      .testimonial-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+      .testimonial-card {
+        width: 90%;
+      }
+      .about {
+        flex-direction: column;
+      }
+      .about .text, .about .images {
+        max-width: 100%;
+        position: static;
+        height: auto;
+        overflow: visible;
+        border-left: none;
+      }
+      .about .images {
+        max-height: none;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .call-to-action h2 {
+        font-size: 1.8rem;
+      }
+      .call-to-action button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+      }
+    }
+    /*services*/
+    /* Services section — simple, responsive grid. NO marquee styles included. */
+/* Section */
+.services-section {
+  padding: 28px 16px;
+  background: linear-gradient(180deg, rgba(1,10,34,0.95), rgba(2,18,45,0.95));
+}
+.services-container {
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 12px;
+}
+.services-section h2 {
+  font-family: "Roboto", sans-serif;
+  color: var(--accent);
+  margin-bottom: 6px;
+  font-size: 1.8rem;
+}
+.services-section .lead {
+  color: var(--muted);
+  margin-bottom: 18px;
+  font-size: 0.99rem;
+}
+
+/* Grid of cards (wraps responsively) */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+/* Card */
+.service-card {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(64,207,255,0.06);
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+  outline: none;
+}
+.service-card:focus,
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(0,192,255,0.08);
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+}
+
+/* Icon */
+.service-icon {
+  width:56px;
+  height:56px;
+  min-width:56px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(135deg, rgba(0,192,255,0.04), rgba(64,207,255,0.02));
+  border: 1px solid rgba(0,192,255,0.06);
+  flex-shrink:0;
+}
+
+/* Text */
+.service-info { flex:1; min-width:0; display:flex; flex-direction:column; gap:6px; }
+.service-info h3 { font-size:1rem; margin:0; color:var(--white); }
+.service-subline { color: var(--muted); font-size:0.86rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.service-desc {
+  margin:0;
+  color:var(--muted);
+  font-size:0.9rem;
+  max-height:0;
+  overflow:hidden;
+  opacity:0;
+  transform: translateY(-6px);
+  transition: max-height .32s ease, opacity .28s ease, transform .28s ease;
+}
+
+/* Active/expanded card */
+.service-card.active {
+  /* visually highlighted */
+  border-color: rgba(64,207,255,0.12);
+  box-shadow: 0 22px 68px rgba(0,192,255,0.12);
+}
+.service-card.active .service-desc {
+  max-height: 400px; /* enough to show the paragraph */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CTA button inside section */
+.services-cta { text-align:center; margin-top:18px; }
+.btn-primary {
+  background: var(--accent);
+  color: var(--navy);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .18s ease, background .18s ease;
+}
+.btn-primary:hover { background: var(--accent-light); transform: translateY(-3px); }
+
+/* Responsive tweaks */
+@media (max-width:600px) {
+  .service-icon { width:48px; height:48px; min-width:48px; }
+  .service-desc { font-size:0.92rem; }
+  .services-section { padding:20px 12px; }
+}
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const images = document.querySelectorAll(".about .images img");
+      let current = 0;
+      images[current].classList.add("active");
+
+      setInterval(() => {
+        images[current].classList.remove("active");
+        current = (current + 1) % images.length;
+        images[current].classList.add("active");
+      }, 3500); // Change image every 3.5 seconds
+    });
+  </script>
+</head>
+<body>
+
+<!-- Navbar -->
+<!-- Navbar -->
+<nav role="navigation" aria-label="Main Navigation">
+  <div class="brand">
+    
+    <div class="logo-container">
+      <img src="download (3)-Photoroom.png" alt="" class="logo-img">
+    </div>
+    <!-- Company name below logo -->
+    <div class="logo-text">Baghla Research and Analytics</div>
+  </div>
+
+  <!-- Hamburger Icon -->
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul>
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#extra">Explore</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li style="background-color:#00c0ff; border-radius:20px; padding:5px 10px;">
+      <a href="#cta" style="color:#010a22; text-decoration:none;">Get Started</a>
+    </li>
+  </ul>
+</nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero" role="banner">
+    <div class="content">
+      <h1 class="heading">Empower Your Digital Presence</h1>
+      <p>Custom tailored solutions designed for your success</p>
+      <button class="btn-primary" onclick="location.href='#cta'">Get Started</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about" aria-labelledby="about-heading">
+    <div class="text">
+      <h2 id="about-heading">Who We Are</h2>
+      <p>Building innovative, meaningful web experiences with a passion for design and technology.</p>
+      <p>Committed to quality, creativity, and your satisfaction every step of the way.</p>
+    </div>
+    <div class="images" aria-label="Showcase images">
+      <img src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Professional team working together" />
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern office environment" />
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Business meeting discussion" />
+      <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Working on laptop with coffee" />
+    </div>
+  </section>
+
+  <!--services-->
+
+<section id="services" class="services-section" aria-labelledby="services-heading">
+  <div class="services-container">
+    <h2 id="services-heading">Our Services</h2>
+    <p class="lead">Business & Management Consultancy — Book a Zoom session now!</p>
+
+    <!-- Responsive grid (no marquee) -->
+    <div class="services-grid" role="list" aria-label="List of services">
+      <article class="service-card" role="button" tabindex="0" aria-pressed="false" data-index="0">
+        <div class="service-icon" aria-hidden="true">
+          <!-- small inline SVG icon -->
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="7" width="20" height="12" rx="2" fill="#40cfff22"/>
+            <path d="M7 7V4h10v3" stroke="#00c0ff33" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3>Sales</h3>
+          <div class="service-subline">Drive revenue with modern sales processes</div>
+          <p class="service-desc">Design and implement high-converting sales funnels, training, CRM setup and KPI dashboards tailored to your market and team.</p>
+        </div>
+      </article>
+
+      <article class="service-card" role="button" tabindex="0" aria-pressed="false" data-index="1">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="8" r="3" fill="#40cfff22"/>
+            <path d="M5 20c1.5-6 6-8 7-8s5.5 2 7 8" stroke="#00c0ff33" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3>Business Development</h3>
+          <div class="service-subline">Partnerships, strategy & expansion</div>
+          <p class="service-desc">Identify new channels, create partnership strategies and build go-to-market plans that accelerate growth.</p>
+        </div>
+      </article>
+
+      <article class="service-card" role="button" tabindex="0" aria-pressed="false" data-index="2">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="4" width="18" height="16" rx="2" fill="#40cfff22"/>
+            <path d="M8 10h8M8 14h8" stroke="#00c0ff33" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3>Finance & Accounts</h3>
+          <div class="service-subline">Accurate accounting & financial control</div>
+          <p class="service-desc">From bookkeeping to CFO advisory — robust finance processes, budgeting and financial modelling for funding readiness.</p>
+        </div>
+      </article>
+
+      <article class="service-card" role="button" tabindex="0" aria-pressed="false" data-index="3">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 6h18M6 6v12" stroke="#00c0ff33" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="8" y="9" width="10" height="6" rx="1" fill="#40cfff22"/>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3>MIS & Dashboards</h3>
+          <div class="service-subline">Data-driven decision making</div>
+          <p class="service-desc">We build MIS, reporting pipelines and dashboards that deliver timely insights for leadership and operations teams.</p>
+        </div>
+      </article>
+
+      <article class="service-card" role="button" tabindex="0" aria-pressed="false" data-index="4">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3l8 5v2H4V8l8-5z" fill="#40cfff22"/>
+            <path d="M5 12h14v6a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-6z" stroke="#00c0ff33" stroke-width="1.2"/>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3>Banking & Loans</h3>
+          <div class="service-subline">Funding advisory & relationships</div>
+          <p class="service-desc">Assistance with term loans, working capital, banking relationships and preparing documents for institutions.</p>
+        </div>
+      </article>
+
+      <article class="service-card" role="button" tabindex="0" aria-pressed="false" data-index="5">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 17l6-6 4 4 8-8" stroke="#00c0ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3>Growth Strategy</h3>
+          <div class="service-subline">Scale your business sustainably</div>
+          <p class="service-desc">Market entry playbooks, pricing, customer acquisition and retention strategies to sustainably grow revenues and margins.</p>
+        </div>
+      </article>
+
+      <!-- add more cards as needed -->
+    </div>
+
+    <div class="services-cta" aria-hidden="false">
+      <button class="btn-primary" onclick="location.href='#cta'">Book A Session Now!</button>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Features Section -->
+<section id="about" class="about-section">
+  <div class="about-container">
+    <!-- Left Column: Image -->
+    <div class="about-image">
+      <img src="https://via.placeholder.com/400x400" alt="Person Image">
+    </div>
+
+    <!-- Right Column: Info -->
+    <div class="about-info">
+      <h2>Sumedh Baghla</h2>
+      <p>Sumedh Baghla is an experienced advisor specializing in business strategy, finance and operational scaling. He partners closely with leadership teams to build robust systems and measurable growth playbooks.
+
+Services include fractional CFO advisory, MIS & reporting, fundraising preparation and strategic commercial initiatives.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Extra Visuals Section -->
+  <section id="extra" class="extra-visuals" aria-labelledby="extra-heading">
+    <h2 id="extra-heading">Inspire. Create. Transform.</h2>
+    <p>Bringing your vision alive through stunning visuals and captivating interactions.</p>
+    <div class="extra-visuals-images" aria-label="Inspirational images">
+     <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Creative meeting" />
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section id="cta" class="call-to-action" role="region" aria-label="Call to action">
+    <h2>Ready to take off with your project?</h2>
+    <button onclick="alert('Thank you for your interest! We will contact you soon.')">Contact Us Now</button>
+  </section>
+
+  <!--extra section again-->
+   <section id="why-us" class="why-us-section">
+  <div class="why-us-container">
+    <!-- Empty space on the left -->
+    <div class="why-us-empty"></div>
+
+    <!-- Right side content -->
+    <div class="why-us-content">
+      <h2>Why Choose Us?</h2>
+      <p>Taking the right guidance and consulting services can make a huge difference in growing your business. Our team offers expert advice on sales, finance, cash flow management, and overall business strategy to help your company reach its full potential.</p>
+      <p>With professional support from experienced consultants, you can optimize operations, improve decision-making, and achieve sustainable growth. Don’t navigate business challenges alone — leverage our expertise and take your business to the next level.</p>
+    </div>
+  </div>
+       
+</section>
+
+
+<div class="services-cta" aria-hidden="false">
+      <button class="btn-primary" onclick="location.href='#cta'">Book A Session Now!</button>
+    </div>
+
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials" aria-labelledby="testimonials-heading" role="region">
+    <h2 id="testimonials-heading">What Our Clients Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <div class="testimonial-avatar"><img src="https://randomuser.me/api/portraits/women/81.jpg" alt="Client Anna" /></div>
+        <p class="testimonial-text">"Exceptional quality and attention to detail. The website exceeded our expectations!"</p>
+        <div class="testimonial-author">Anna K.</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-avatar"><img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Client John" /></div>
+        <p class="testimonial-text">"Quick and professional work. Highly recommended for any digital projects."</p>
+        <div class="testimonial-author">John M.</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-avatar"><img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client Sara" /></div>
+        <p class="testimonial-text">"The team's creativity and dedication helped boost our business immensely."</p>
+        <div class="testimonial-author">Sara L.</div>
+      </div>
+    </div>
+  </section>
+<div class="services-cta" aria-hidden="false">
+      <button class="btn-primary" onclick="location.href='#cta'">Book A Session Now!</button>
+    </div>
+  <!-- Footer -->
+  <footer role="contentinfo">
+    &copy; 2024 BlueWave Digital Studio. All rights reserved.
+  </footer>
+<script>
+// Hamburger toggle
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('nav ul');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navMenu.classList.toggle('show');
+});
+ 
+/* JS will handle active slide scaling services*/
+
+    // Lightweight JS to handle expand/collapse and keyboard accessibility for service cards.
+// No marquee behavior included.
+
+document.addEventListener('DOMContentLoaded', function () {
+  const cards = Array.from(document.querySelectorAll('.service-card'));
+
+  if (!cards.length) return;
+
+  cards.forEach(card => {
+    // Toggle function
+    const toggle = (ev) => {
+      // prevent default to avoid unexpected navigation/scroll behavior
+      if (ev && typeof ev.preventDefault === 'function') ev.preventDefault();
+      ev && ev.stopPropagation && ev.stopPropagation();
+
+      // if card is already active, collapse it
+      const isActive = card.classList.contains('active');
+
+      // collapse all others
+      cards.forEach(c => {
+        if (c !== card) {
+          c.classList.remove('active');
+          c.setAttribute('aria-pressed', 'false');
+        }
+      });
+
+      if (isActive) {
+        card.classList.remove('active');
+        card.setAttribute('aria-pressed', 'false');
+      } else {
+        card.classList.add('active');
+        card.setAttribute('aria-pressed', 'true');
+        // try to keep focus visible without forcing vertical scroll
+        try {
+          card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+        } catch (e) {
+          // ignore if not supported
+        }
+      }
+    };
+
+    // Click
+    card.addEventListener('click', toggle);
+
+    // Keyboard: Enter or Space toggles
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle(e);
+      }
+      // Arrow keys navigate between cards
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        const next = cards[(cards.indexOf(card) + 1) % cards.length];
+        next.focus();
+      }
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        const prev = cards[(cards.indexOf(card) - 1 + cards.length) % cards.length];
+        prev.focus();
+      }
+    });
+
+    // Prevent accidental focus outline removal for mouse users while keeping keyboard focus visible
+    card.addEventListener('mousedown', () => card.classList.add('mouse-pressed'));
+    card.addEventListener('mouseup', () => setTimeout(() => card.classList.remove('mouse-pressed'), 150));
+  });
+
+  // Close any open card when clicking outside the grid
+  document.addEventListener('click', (e) => {
+    const grid = document.querySelector('.services-grid');
+    if (!grid) return;
+    if (!grid.contains(e.target)) {
+      cards.forEach(c => { c.classList.remove('active'); c.setAttribute('aria-pressed', 'false'); });
+    }
+  });
+});
+  </script>
+</body>
+</html>
