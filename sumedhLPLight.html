@@ -76,6 +76,8 @@
     }
 
     /* Navbar */
+
+/* -------------------- NAVBAR -------------------- */
 nav {
   display: flex;
   justify-content: space-between;
@@ -85,16 +87,36 @@ nav {
   position: sticky;
   top: 0;
   z-index: 999;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+/* BRAND (your existing .brand) */
 nav .brand {
+  display: flex;
+  flex-direction: column;   /* logo above, name below */
+  align-items: center;
   font-weight: 700;
-  font-size: 1.6rem;
-  color: var(--accent);
+  font-size: 0.9rem !important;  /* smaller */
+  color: #ffffff !important; /* white text */
   letter-spacing: 1px;
+  text-align: center;
+  line-height: 1.2;
 }
 
+/* Logo above name (auto-added, no HTML change needed) */
+nav .brand::before {
+  content: "";
+  width: 45px;
+  height: 45px;
+  background-image: url('your-logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* -------------------- MENU -------------------- */
 nav ul {
   display: flex;
   gap: 1.5rem;
@@ -107,7 +129,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: var(--white);
+  color: var(--text-dark);
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -116,7 +138,7 @@ nav ul li a:hover {
   color: var(--accent-light);
 }
 
-/* Hamburger */
+/* -------------------- HAMBURGER -------------------- */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -128,41 +150,12 @@ nav ul li a:hover {
   display: block;
   width: 25px;
   height: 3px;
-  background: var(--white);
+  background: var(--text-dark);
   border-radius: 3px;
   transition: all 0.3s ease;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  nav ul {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: var(--dark-navy);
-    width: 200px;
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
-    display: none;
-  }
-
-  nav ul.show {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-  .hero h1 {
-    font-size:4.6rem;
-  }
-    .hero h1 {
-      font-size: 5rem;
-    }
-}
-
-/* Hamburger animation when active */
+/* Active state */
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -172,31 +165,31 @@ nav ul li a:hover {
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
-    .logo-container {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+/* -------------------- MOBILE MENU -------------------- */
+@media (max-width: 768px) {
+  nav ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #ffffff;
+    width: 200px;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }
 
-/* Logo image */
-.logo-img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px; /* optional rounded corners */
-  object-fit: contain;
-}
-
-/* Company name below logo */
-.logo-text {
-  font-size: 0.8rem;
-  color: #ffffff; /* white text */
-  text-transform: lowercase;
-  letter-spacing: 0.5px;
-  text-align: center;
-}
     /* Hero */
     .hero {
       background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center center fixed no-repeat;
@@ -432,37 +425,44 @@ nav ul li a:hover {
     }
 
     /* Call to Action */
-    .call-to-action {
-      background-color: #ffffff;
-      color: var(--navy);
-      padding: 3rem 1.5rem;
-      text-align: center;
-      border-radius: 20px;
-      margin: 4rem 1.5rem 6rem 1.5rem;
-      box-shadow: 0 8px 20px rgba(0, 192, 255, 0.7);
-      animation: pulse 3s infinite ease-in-out;
-    }
-    .call-to-action h2 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color:  var(--navy);
-    }
-    .call-to-action button {
-      background-color: var(--navy);
-      color: #ffffff;
-      font-weight: 700;
-      font-size: 1.2rem;
-      padding: 1rem 3rem;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .call-to-action button:hover {
-      background-color: var(--accent-light);
-      color: var(--white);
-    }
+ .call-to-action {
+  background-color: #ffffff;
+  color: var(--text-dark);
+  padding: 3rem 1.5rem;
+  text-align: center;
+  border-radius: 20px;
+  margin: 4rem 1.5rem 6rem 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  animation: pulse 3s infinite ease-in-out;
+}
+
+/* Heading */
+.call-to-action h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-dark);  /* dark text for light theme */
+}
+
+/* Button */
+.call-to-action button {
+  background-color: var(--accent); /* royal blue button */
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Hover */
+.call-to-action button:hover {
+  background-color: var(--accent-light);
+  color: var(--white);
+}
 
 /*why choose us*/
 .why-us-section {
