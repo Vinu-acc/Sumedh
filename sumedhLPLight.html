@@ -80,7 +80,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  background-color: var(--dark-navy);
+  background-color: var(--white);
   position: sticky;
   top: 0;
   z-index: 999;
@@ -106,7 +106,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: var(--white);
+  color: var(--dark-navy);
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -127,7 +127,7 @@ nav ul li a:hover {
   display: block;
   width: 25px;
   height: 3px;
-  background: var(--white);
+  background: var(--dark-navy);
   border-radius: 3px;
   transition: all 0.3s ease;
 }
@@ -191,7 +191,7 @@ nav ul li a:hover {
 /* Company name below logo */
 .logo-text {
   font-size: 0.8rem;
-  color: #ffffff; /* white text */
+  color: var(--dark-navy) /* white text */
   text-transform: lowercase;
   letter-spacing: 0.5px;
   text-align: center;
@@ -346,7 +346,7 @@ nav ul li a:hover {
       height: 400px;
       object-fit: cover;
       border-radius: 16px;
-      box-shadow: 0 8px 24px #0642a2;
+      box-shadow: 0 8px 24px var(--dark-navy);
       cursor: pointer;
       opacity: 0;
       transition: opacity 1s ease-in-out;
@@ -364,6 +364,7 @@ nav ul li a:hover {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  background: var(--white);
 }
 
 .about-container {
@@ -385,7 +386,7 @@ nav ul li a:hover {
 .about-image img {
   width: 100%;
   border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 20px var(--dark-navy);
   object-fit: cover;
 }
 
@@ -398,13 +399,13 @@ nav ul li a:hover {
 
 .about-info h2 {
   font-size: 2rem;
-  color: var(--accent);
+  color: var(--dark-navy);
   margin-bottom: 20px;
 }
 
 .about-info p {
   font-size: 1rem;
-  color: var(--text-light);
+  color: var(--dark-navy);
   margin-bottom: 15px;
 }
 
@@ -449,7 +450,7 @@ nav ul li a:hover {
       font-weight: 300;
       max-width: 600px;
       margin: 0 auto 2rem auto;
-      color: var(--accent);
+      color: var(--dark-navy);
     }
     .extra-visuals-images {
       display: flex;
@@ -473,12 +474,12 @@ nav ul li a:hover {
     /* Call to Action */
     .call-to-action {
       background-color: #ffffff;
-      color: var(--navy);
+      color: var(--dark-navy);
       padding: 3rem 1.5rem;
       text-align: center;
       border-radius: 20px;
       margin: 4rem 1.5rem 6rem 1.5rem;
-      box-shadow: 0 8px 20px #0642a2;
+      box-shadow: 0 8px 20px var(--dark-navy);
       animation: pulse 3s infinite ease-in-out;
     }
     .call-to-action h2 {
@@ -508,7 +509,7 @@ nav ul li a:hover {
   padding: 60px 20px;
   width: 100%;
   max-width: 1200px;
-  margin: 40px auto;
+  margin: 40px 20px;
   border-radius: 30px;
   background-image: url('https://img.freepik.com/premium-vector/navy-chrome-white-luxury-sharp-background_78370-726.jpg');
   background-size: cover;
@@ -571,15 +572,20 @@ nav ul li a:hover {
   .why-us-empty {
     display: none;
   }
+/* Empty space on the left */
+.why-us-empty {
+  flex: 1; /* 1/3 width */
+  width: 25%;
+}
+
+/* Right side content */
 .why-us-content {
   flex: 2; /* 2/3 width */
-  color: #000000; /* black text */
+  width: 75%;
+  color: var(--dark-navy); /* black text */
   text-align: right; /* align text to right */
   animation: fadeSlideIn 1s ease forwards;
 }
-
-  .why-us-empty {
-  flex: 1; /* 1/3 width */
   
 }
 
@@ -595,12 +601,12 @@ nav ul li a:hover {
 
     /* Testimonials */
     .testimonials {
-      background-color: var(--dark-navy);
+      background-color: var(--white);
       padding: 4rem 1.5rem;
       color: var(--text-light);
       text-align: center;
       max-width: 1100px;
-      margin: 0 auto 4rem auto;
+      margin: 3rem 1.5rem 4rem 1.5rem;
       border-radius: 20px;
       box-shadow: 0 6px 24px rgba(0, 192, 255, 0.5);
     }
@@ -615,7 +621,7 @@ nav ul li a:hover {
       justify-content: center;
     }
     .testimonial-card {
-      background-color: var(--navy);
+      background-color: var(--white);
       border-radius: 20px;
       padding: 2rem;
       width: 300px;
@@ -630,7 +636,7 @@ nav ul li a:hover {
       cursor: default;
     }
     .testimonial-card:hover {
-      box-shadow: 0 10px 40px rgba(0, 192, 255, 0.9);
+      box-shadow: 0 10px 40px var(--dark-navy);
     }
     .testimonial-avatar {
       height: 80px;
@@ -660,7 +666,7 @@ nav ul li a:hover {
     footer {
       background-color: var(--dark-navy);
       padding: 1.5rem 1.5rem;
-      color: var(--text-dark);
+      color: var(--dark-navy);
       text-align: center;
       font-size: 0.9rem;
       border-top: 1px solid var(--accent-light);
@@ -791,7 +797,7 @@ nav ul li a:hover {
   align-items:center;
   justify-content:center;
   background:none;
-  border: 1px solid rgba(0,192,255,0.06);
+  border: 1.5px solid var(--dark-navy);
   flex-shrink:0;
 }
 
